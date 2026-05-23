@@ -1,0 +1,768 @@
+fileFormatVersion: 2
+guid: 2ce52a889f13adc4c883c456637cd61c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8252671246704864061
+    second: ca4_0
+  - first:
+      213: 6121005265701517667
+    second: ca4_1
+  - first:
+      213: -2406592010772778924
+    second: ca4_2
+  - first:
+      213: -5780368186539258243
+    second: ca4_3
+  - first:
+      213: -4884790915370245429
+    second: ca4_4
+  - first:
+      213: -4643093181255220811
+    second: ca4_5
+  - first:
+      213: -8403734065782478380
+    second: ca4_6
+  - first:
+      213: 1982538238186617690
+    second: ca4_7
+  - first:
+      213: 1824002557804231747
+    second: ca4_8
+  - first:
+      213: -5478570848747139088
+    second: ca4_9
+  - first:
+      213: -7798965791857458583
+    second: ca4_10
+  - first:
+      213: 8742547254955072503
+    second: ca4_11
+  - first:
+      213: -2332094097934200944
+    second: ca4_12
+  - first:
+      213: -5737232109892911742
+    second: ca4_13
+  - first:
+      213: 6825557778807963772
+    second: ca4_14
+  - first:
+      213: 7888009293098430896
+    second: ca4_15
+  - first:
+      213: 6118057640974413420
+    second: ca4_16
+  - first:
+      213: 3830138510645027302
+    second: ca4_17
+  - first:
+      213: 355374915032674052
+    second: ca4_18
+  - first:
+      213: -5898163326076373001
+    second: ca4_19
+  - first:
+      213: 2867284147057789797
+    second: ca4_20
+  - first:
+      213: -3141971649878929898
+    second: ca4_21
+  - first:
+      213: -1410990992442301892
+    second: ca4_22
+  - first:
+      213: 280896460566592861
+    second: ca4_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ca4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 765
+        width: 1536
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c49314c93f987d80800000000000000
+      internalID: -8252671246704864061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 510
+        width: 315
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3693f62dbdd22f450800000000000000
+      internalID: 6121005265701517667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 514
+        width: 130
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450789e11511a9ed0800000000000000
+      internalID: -2406592010772778924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_3
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 503
+        width: 345
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ecb5292c108cfa0800000000000000
+      internalID: -5780368186539258243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_4
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 527
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc22d4f0b8cb53cb0800000000000000
+      internalID: -4884790915370245429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_5
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 505
+        width: 132
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b18e301a5b609fb0800000000000000
+      internalID: -4643093181255220811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_6
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 502
+        width: 282
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9af2e5460ff5b80800000000000000
+      internalID: -8403734065782478380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 332
+        width: 212
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5bfdb01604638b10800000000000000
+      internalID: 1982538238186617690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_8
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 332
+        width: 149
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c335f89a8205910800000000000000
+      internalID: 1824002557804231747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_9
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 343
+        width: 268
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffcd9bf6d438f3b0800000000000000
+      internalID: -5478570848747139088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_10
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 325
+        width: 243
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962c9e8dee184c390800000000000000
+      internalID: -7798965791857458583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_11
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 330
+        width: 291
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbd9ab8864c35970800000000000000
+      internalID: 8742547254955072503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 187
+        width: 105
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fc8dd16ccb2afd0800000000000000
+      internalID: -2332094097934200944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_13
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 189
+        width: 151
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d3edf0bc14160b0800000000000000
+      internalID: -5737232109892911742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_14
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 195
+        width: 166
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70c0cfe2a049be50800000000000000
+      internalID: 6825557778807963772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 194
+        width: 140
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1bc1cd8a6d77d60800000000000000
+      internalID: 7888009293098430896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_16
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 202
+        width: 176
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ee4a57205b7e450800000000000000
+      internalID: 6118057640974413420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_17
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 190
+        width: 215
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e16a87bea2672530800000000000000
+      internalID: 3830138510645027302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 244
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f6b943a9b8ee400800000000000000
+      internalID: 355374915032674052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_19
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 29
+        width: 167
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f73bf964b3852ea0800000000000000
+      internalID: -5898163326076373001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_20
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 33
+        width: 213
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b0d7f7db3aac720800000000000000
+      internalID: 2867284147057789797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_21
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 43
+        width: 96
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e4e9a6e697564d0800000000000000
+      internalID: -3141971649878929898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_22
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 38
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32633a0b272b6ce0800000000000000
+      internalID: -1410990992442301892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_23
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 16
+        width: 163
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d7cb6b7d1f5e300800000000000000
+      internalID: 280896460566592861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ca4_24
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 0
+        width: 353
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb953ec704adaa4d97bcd2c022d70de
+      internalID: -1889680602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9e9ea7383f9e1934790b24c2359d7fe3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ca4_0: -8252671246704864061
+      ca4_1: 6121005265701517667
+      ca4_10: -7798965791857458583
+      ca4_11: 8742547254955072503
+      ca4_12: -2332094097934200944
+      ca4_13: -5737232109892911742
+      ca4_14: 6825557778807963772
+      ca4_15: 7888009293098430896
+      ca4_16: 6118057640974413420
+      ca4_17: 3830138510645027302
+      ca4_18: 355374915032674052
+      ca4_19: -5898163326076373001
+      ca4_2: -2406592010772778924
+      ca4_20: 2867284147057789797
+      ca4_21: -3141971649878929898
+      ca4_22: -1410990992442301892
+      ca4_23: 280896460566592861
+      ca4_24: -1889680602
+      ca4_3: -5780368186539258243
+      ca4_4: -4884790915370245429
+      ca4_5: -4643093181255220811
+      ca4_6: -8403734065782478380
+      ca4_7: 1982538238186617690
+      ca4_8: 1824002557804231747
+      ca4_9: -5478570848747139088
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
