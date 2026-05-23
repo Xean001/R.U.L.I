@@ -40,7 +40,7 @@ public class ParallaxN1 : MonoBehaviour
             for (int i = 0; i < layerSpeeds.Length; i++)
             {
                 float t = layerSpeeds.Length <= 1 ? 1f : (float)i / (layerSpeeds.Length - 1);
-                layerSpeeds[i] = Mathf.Lerp(0.2f, 1f, t);
+                layerSpeeds[i] = Mathf.Lerp(0.95f, 0.05f, t);
             }
         }
 

@@ -1,0 +1,714 @@
+fileFormatVersion: 2
+guid: 272c4af9f0f644b168a97d3be747209d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8884321967688996221
+    second: RULI SIN FONDO_0
+  - first:
+      213: -1247925726902812064
+    second: RULI SIN FONDO_1
+  - first:
+      213: 3196220598607577887
+    second: RULI SIN FONDO_2
+  - first:
+      213: -5582577614933069200
+    second: RULI SIN FONDO_3
+  - first:
+      213: -1281941493949832717
+    second: RULI SIN FONDO_4
+  - first:
+      213: -1621582808863269734
+    second: RULI SIN FONDO_5
+  - first:
+      213: 354024166291761273
+    second: RULI SIN FONDO_6
+  - first:
+      213: -6320271068445884970
+    second: RULI SIN FONDO_7
+  - first:
+      213: -4244195059293918939
+    second: RULI SIN FONDO_8
+  - first:
+      213: 5806752752064960594
+    second: RULI SIN FONDO_9
+  - first:
+      213: 9153085216753177825
+    second: RULI SIN FONDO_10
+  - first:
+      213: 995680789064800524
+    second: RULI SIN FONDO_11
+  - first:
+      213: -1052968508837620281
+    second: RULI SIN FONDO_12
+  - first:
+      213: -4922216657572736968
+    second: RULI SIN FONDO_13
+  - first:
+      213: 2253716498683650907
+    second: RULI SIN FONDO_14
+  - first:
+      213: 4860385643223015517
+    second: RULI SIN FONDO_15
+  - first:
+      213: 5435753904979675784
+    second: RULI SIN FONDO_16
+  - first:
+      213: -7378299367765731613
+    second: RULI SIN FONDO_17
+  - first:
+      213: 2634622361683035449
+    second: RULI SIN FONDO_18
+  - first:
+      213: 540312779921950233
+    second: RULI SIN FONDO_19
+  - first:
+      213: 7982053030287005428
+    second: RULI SIN FONDO_20
+  - first:
+      213: 7622571750790152948
+    second: RULI SIN FONDO_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RULI SIN FONDO_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 775
+        width: 123
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38aa2b5dd3c84b480800000000000000
+      internalID: -8884321967688996221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 775
+        width: 122
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06203e5c92a7eaee0800000000000000
+      internalID: -1247925726902812064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 775
+        width: 123
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f138acb33b14b5c20800000000000000
+      internalID: 3196220598607577887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 775
+        width: 122
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072fddaac33b682b0800000000000000
+      internalID: -5582577614933069200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_4
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 775
+        width: 121
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f16946d001a53ee0800000000000000
+      internalID: -1281941493949832717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_5
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 774
+        width: 121
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c13dfd60bfe79e0800000000000000
+      internalID: -1621582808863269734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_6
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 775
+        width: 125
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97869b18a1fb9e400800000000000000
+      internalID: 354024166291761273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_7
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 775
+        width: 123
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddba1113f2e948a0800000000000000
+      internalID: -6320271068445884970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 458
+        width: 114
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529615d84179915c0800000000000000
+      internalID: -4244195059293918939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_9
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 458
+        width: 115
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2589a5dccdab59050800000000000000
+      internalID: 5806752752064960594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_10
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 458
+        width: 126
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4d37f628a460f70800000000000000
+      internalID: 9153085216753177825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_11
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 458
+        width: 116
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0953edf66e51dd00800000000000000
+      internalID: 995680789064800524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_12
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 458
+        width: 115
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c59f0758ba1361f0800000000000000
+      internalID: -1052968508837620281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_13
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 458
+        width: 126
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830ddd96706c0bbb0800000000000000
+      internalID: -4922216657572736968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_14
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 458
+        width: 113
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53e970073fc64f10800000000000000
+      internalID: 2253716498683650907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_15
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 458
+        width: 111
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5067b7bdfe837340800000000000000
+      internalID: 4860385643223015517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_16
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 19
+        width: 130
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a81c0706daf6b40800000000000000
+      internalID: 5435753904979675784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_17
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 42
+        width: 116
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e695d121d30b9990800000000000000
+      internalID: -7378299367765731613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 99
+        width: 129
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9350b61441f009420800000000000000
+      internalID: 2634622361683035449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_19
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 140
+        width: 166
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9160ad25c939f7700800000000000000
+      internalID: 540312779921950233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_20
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 89
+        width: 125
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f65698b0f2f5ce60800000000000000
+      internalID: 7982053030287005428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_21
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 24
+        width: 132
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f246c80f90d8c960800000000000000
+      internalID: 7622571750790152948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RULI SIN FONDO_22
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 19
+        width: 165
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e898b1e8d8f4c36bb10963190f0473
+      internalID: -2058210293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e7dfd4f13e25648b5a23f3e7521b7319
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      RULI SIN FONDO_0: -8884321967688996221
+      RULI SIN FONDO_1: -1247925726902812064
+      RULI SIN FONDO_10: 9153085216753177825
+      RULI SIN FONDO_11: 995680789064800524
+      RULI SIN FONDO_12: -1052968508837620281
+      RULI SIN FONDO_13: -4922216657572736968
+      RULI SIN FONDO_14: 2253716498683650907
+      RULI SIN FONDO_15: 4860385643223015517
+      RULI SIN FONDO_16: 5435753904979675784
+      RULI SIN FONDO_17: -7378299367765731613
+      RULI SIN FONDO_18: 2634622361683035449
+      RULI SIN FONDO_19: 540312779921950233
+      RULI SIN FONDO_2: 3196220598607577887
+      RULI SIN FONDO_20: 7982053030287005428
+      RULI SIN FONDO_21: 7622571750790152948
+      RULI SIN FONDO_22: -2058210293
+      RULI SIN FONDO_3: -5582577614933069200
+      RULI SIN FONDO_4: -1281941493949832717
+      RULI SIN FONDO_5: -1621582808863269734
+      RULI SIN FONDO_6: 354024166291761273
+      RULI SIN FONDO_7: -6320271068445884970
+      RULI SIN FONDO_8: -4244195059293918939
+      RULI SIN FONDO_9: 5806752752064960594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
