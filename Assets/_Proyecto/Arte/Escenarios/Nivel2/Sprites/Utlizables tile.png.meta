@@ -1,0 +1,595 @@
+fileFormatVersion: 2
+guid: e7fe09776d5a7804bbd9c6771ee7a65a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3510724034617344320
+    second: Utlizables tile_0
+  - first:
+      213: 2383366095177931423
+    second: Utlizables tile_1
+  - first:
+      213: -4709099440469630009
+    second: Utlizables tile_2
+  - first:
+      213: -5519057568862382387
+    second: Utlizables tile_3
+  - first:
+      213: 41974194619296613
+    second: Utlizables tile_4
+  - first:
+      213: 7452869683642179908
+    second: Utlizables tile_5
+  - first:
+      213: 4036101910057314588
+    second: Utlizables tile_6
+  - first:
+      213: 8625463859897140622
+    second: Utlizables tile_7
+  - first:
+      213: 5197864979029421521
+    second: Utlizables tile_8
+  - first:
+      213: -3556056559851343983
+    second: Utlizables tile_9
+  - first:
+      213: -2100306884544136284
+    second: Utlizables tile_10
+  - first:
+      213: 5099593926160883842
+    second: Utlizables tile_11
+  - first:
+      213: -4671699556820691116
+    second: Utlizables tile_12
+  - first:
+      213: 8982843289057961597
+    second: Utlizables tile_13
+  - first:
+      213: 6401773263000136668
+    second: Utlizables tile_14
+  - first:
+      213: 898605717167168026
+    second: Utlizables tile_15
+  - first:
+      213: 4677939054462002955
+    second: Utlizables tile_16
+  - first:
+      213: 604827240681870273
+    second: Utlizables tile_17
+  - first:
+      213: -864455188033505559
+    second: Utlizables tile_18
+  - first:
+      213: 2653526165462353964
+    second: Utlizables tile_19
+  - first:
+      213: -546548906682283574
+    second: Utlizables tile_20
+  - first:
+      213: 3056479478882766861
+    second: Utlizables tile_21
+  - first:
+      213: -7105149852498133818
+    second: Utlizables tile_22
+  - first:
+      213: -2485093795995255250
+    second: Utlizables tile_23
+  - first:
+      213: -5991620589639586288
+    second: Utlizables tile_24
+  - first:
+      213: -2259707615609585924
+    second: Utlizables tile_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Utlizables tile_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 619
+        width: 433
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cef4345717674fc0800000000000000
+      internalID: -3510724034617344320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 415
+        width: 468
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a5ac006da631120800000000000000
+      internalID: 2383366095177931423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_2
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 619
+        width: 359
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c321de320be5aeb0800000000000000
+      internalID: -4709099440469630009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_3
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 411
+        width: 496
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6d601e16e5863b0800000000000000
+      internalID: -5519057568862382387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_4
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 622
+        width: 686
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b2400ce4f159000800000000000000
+      internalID: 41974194619296613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_5
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 410
+        width: 501
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44125c28d79ed6760800000000000000
+      internalID: 7452869683642179908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 221
+        width: 422
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fecdc466956aec0800000000000000
+      internalID: -3556056559851343983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_12
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 219
+        width: 195
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4575a5a310aca2fb0800000000000000
+      internalID: -4671699556820691116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_13
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 215
+        width: 252
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d762d45d06879ac70800000000000000
+      internalID: 8982843289057961597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_14
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 217
+        width: 553
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb67b95ddaa7d850800000000000000
+      internalID: 6401773263000136668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_16
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 46
+        width: 204
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07622609c06be040800000000000000
+      internalID: 4677939054462002955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_18
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 56
+        width: 156
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6f4092696d004f0800000000000000
+      internalID: -864455188033505559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_19
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 54
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28869e0df733d420800000000000000
+      internalID: 2653526165462353964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_20
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 54
+        width: 283
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac903d44aa44a68f0800000000000000
+      internalID: -546548906682283574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_21
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 56
+        width: 159
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d00141264ebca6a20800000000000000
+      internalID: 3056479478882766861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_24
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 45
+        width: 173
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ead9591dc79dca0800000000000000
+      internalID: -5991620589639586288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utlizables tile_25
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 38
+        width: 199
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe785365e7e3a0e0800000000000000
+      internalID: -2259707615609585924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9ed7e9e86314f8c42ae05b6599d849e0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Utlizables tile_0: -3510724034617344320
+      Utlizables tile_1: 2383366095177931423
+      Utlizables tile_10: -2100306884544136284
+      Utlizables tile_11: 5099593926160883842
+      Utlizables tile_12: -4671699556820691116
+      Utlizables tile_13: 8982843289057961597
+      Utlizables tile_14: 6401773263000136668
+      Utlizables tile_15: 898605717167168026
+      Utlizables tile_16: 4677939054462002955
+      Utlizables tile_17: 604827240681870273
+      Utlizables tile_18: -864455188033505559
+      Utlizables tile_19: 2653526165462353964
+      Utlizables tile_2: -4709099440469630009
+      Utlizables tile_20: -546548906682283574
+      Utlizables tile_21: 3056479478882766861
+      Utlizables tile_22: -7105149852498133818
+      Utlizables tile_23: -2485093795995255250
+      Utlizables tile_24: -5991620589639586288
+      Utlizables tile_25: -2259707615609585924
+      Utlizables tile_3: -5519057568862382387
+      Utlizables tile_4: 41974194619296613
+      Utlizables tile_5: 7452869683642179908
+      Utlizables tile_6: 4036101910057314588
+      Utlizables tile_7: 8625463859897140622
+      Utlizables tile_8: 5197864979029421521
+      Utlizables tile_9: -3556056559851343983
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

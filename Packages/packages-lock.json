@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.anklebreaker.unity-mcp": {
-      "version": "https://github.com/AnkleBreaker-Studio/unity-mcp-plugin.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "fefec182a693f9bf5c33007f5a5096d8972a2e41"
-    },
     "com.coplaydev.coplay": {
       "version": "https://github.com/CoplayDev/coplay-unity-plugin.git",
       "depth": 0,

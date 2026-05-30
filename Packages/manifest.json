@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.anklebreaker.unity-mcp": "https://github.com/AnkleBreaker-Studio/unity-mcp-plugin.git",
     "com.coplaydev.coplay": "https://github.com/CoplayDev/coplay-unity-plugin.git",
     "com.gamelovers.mcp-unity": "https://github.com/CoderGamester/mcp-unity.git",
     "com.unity.2d.animation": "14.0.3",
