@@ -16,8 +16,12 @@ public class RuliMovimiento : MonoBehaviour
     public Vector2 offsetAtaque = new Vector2(0.4f, 0f);
     public LayerMask capaCilindros = ~0;
 
+    [Header("Audio")]
+    [SerializeField] private PlayerSoundcontroler soundControl;
+
     private Rigidbody2D rb;
     private Animator anim;
+    private RuliSalud salud;
     private bool estaEnSuelo;
     private float movimientoHorizontal;
     private bool miraDerecha = true;
@@ -26,8 +30,16 @@ public class RuliMovimiento : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        rb     = GetComponent<Rigidbody2D>();
+        anim   = GetComponent<Animator>();
+        salud  = GetComponent<RuliSalud>();
+        if (soundControl == null)
+            soundControl = GetComponent<PlayerSoundcontroler>();
+    }
+
+    void Start()
+    {
+        if (soundControl != null) soundControl.PlaySpawn();
     }
 
     void Update()
@@ -49,6 +61,14 @@ public class RuliMovimiento : MonoBehaviour
 
         VoltearPersonaje();
         ActualizarAnimaciones();
+
+        if (soundControl != null)
+        {
+            if (!saltoPendiente && estaEnSuelo && Mathf.Abs(movimientoHorizontal) > 0.01f)
+                soundControl.PlayRun();
+            else
+                soundControl.StopRun();
+        }
     }
 
     void FixedUpdate()
@@ -61,12 +81,28 @@ public class RuliMovimiento : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
             saltoPendiente = false;
+            estaEnSuelo = false;
+            if (anim != null) anim.SetTrigger("saltar");
+            if (soundControl != null)
+            {
+                soundControl.StopRun();
+                soundControl.PlayJump();
+            }
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (EsColisionSuelo(col)) estaEnSuelo = true;
+        if (!EsColisionSuelo(col)) return;
+        estaEnSuelo = true;
+
+        var llanta = col.gameObject.GetComponent<Llanta>();
+        if (llanta != null)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, llanta.fuerzaRebote);
+            estaEnSuelo = false;
+            if (anim != null) anim.SetTrigger("saltar");
+        }
     }
 
     void OnCollisionStay2D(Collision2D col)
@@ -82,7 +118,9 @@ public class RuliMovimiento : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (estaMuerto) return;
-        if (other.CompareTag("Mortal")) Morir();
+        if (!other.CompareTag("Mortal")) return;
+        if (salud != null) salud.RecibirDaño();
+        else Morir();
     }
 
     bool EsColisionSuelo(Collision2D col)
@@ -115,6 +153,7 @@ public class RuliMovimiento : MonoBehaviour
 
     void Atacar()
     {
+        if (soundControl != null) soundControl.PlayAttack();
         if (anim != null)
         {
             anim.ResetTrigger("atacar");
@@ -127,6 +166,12 @@ public class RuliMovimiento : MonoBehaviour
         {
             var cilindro = c.GetComponent<Cilindro>();
             if (cilindro != null) cilindro.Golpe();
+
+            var rompible = c.GetComponent<ObjetoRompible>();
+            if (rompible != null) rompible.Golpe();
+
+            var cucaracha = c.GetComponent<EnemigoCucaracha>();
+            if (cucaracha != null) cucaracha.Golpe();
         }
     }
 
@@ -137,12 +182,14 @@ public class RuliMovimiento : MonoBehaviour
         Gizmos.DrawWireSphere(centro, radioAtaque);
     }
 
-    void Morir()
+    public void Morir()
     {
         estaMuerto = true;
         movimientoHorizontal = 0f;
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        if (soundControl != null) soundControl.PlayDead();
+        if (soundControl != null) soundControl.StopRun();
         if (anim != null)
         {
             anim.SetFloat("velocidadX", 0f);

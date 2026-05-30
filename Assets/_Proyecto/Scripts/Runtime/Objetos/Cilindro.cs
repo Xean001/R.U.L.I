@@ -14,6 +14,8 @@ public class Cilindro : MonoBehaviour
     [Tooltip("Golpes extra despues del ultimo frame para destruir el objeto")]
     public int golpesExtraFinal = 3;
 
+    public GameObject monedaPrefab;
+
     private int golpesAcumulados;
     private int frameActual;
     private int golpesExtraAcumulados;
@@ -38,7 +40,11 @@ public class Cilindro : MonoBehaviour
         {
             golpesExtraAcumulados++;
             if (golpesExtraAcumulados >= golpesExtraFinal)
+            {
+                if (monedaPrefab != null)
+                    Instantiate(monedaPrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity);
                 Destroy(gameObject);
+            }
             return;
         }
 

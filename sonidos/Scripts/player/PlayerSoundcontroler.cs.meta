@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 270351b04a450b8439357832f6a4fcdb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - audioattack: {fileID: 8300000, guid: a23c46a8a318c374ab2404e02433179d, type: 3}
+  - audiodead: {fileID: 8300000, guid: 5fe3a0d3f42687d42850d77263f8ee09, type: 3}
+  - audiojump: {fileID: 8300000, guid: ebb61518262a410458cb370ea74b2894, type: 3}
+  - audiorun: {fileID: 8300000, guid: 1e0d2af5b3e7ab747b00f96f3a7e26cf, type: 3}
+  - audiospawn: {fileID: 8300000, guid: 99880db94ae6f4d489a62a0fc1f0665f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
