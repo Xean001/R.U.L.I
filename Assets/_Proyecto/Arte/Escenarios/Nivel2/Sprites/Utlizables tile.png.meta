@@ -244,10 +244,10 @@ TextureImporter:
       name: Utlizables tile_3
       rect:
         serializedVersion: 2
-        x: 524
+        x: 554
         y: 411
-        width: 496
-        height: 181
+        width: 435
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,9 +288,9 @@ TextureImporter:
       name: Utlizables tile_5
       rect:
         serializedVersion: 2
-        x: 1025
+        x: 1044
         y: 410
-        width: 501
+        width: 437
         height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
