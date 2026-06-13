@@ -205,6 +205,10 @@ public class EscudoEnemigo : MonoBehaviour
         anim.SetFloat("velocidadX", 0f);
         if (vidaUI != null) vidaUI.Ocultar();
 
+        // Jefe derrotado -> pantalla de victoria + ir al menu de niveles
+        var victoria = FindFirstObjectByType<VictoriaNivel>();
+        if (victoria != null) victoria.Ganar();
+
         StopAllCoroutines();
         StartCoroutine(Desaparecer());
     }
