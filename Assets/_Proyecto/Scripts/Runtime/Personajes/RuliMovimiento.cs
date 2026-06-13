@@ -172,6 +172,9 @@ public class RuliMovimiento : MonoBehaviour
 
             var cucaracha = c.GetComponent<EnemigoCucaracha>();
             if (cucaracha != null) cucaracha.Golpe();
+
+            var escudo = c.GetComponent<EscudoEnemigo>();
+            if (escudo != null) escudo.Golpe();
         }
     }
 

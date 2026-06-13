@@ -5,8 +5,9 @@ public class VidaUI : MonoBehaviour
 {
     public Image[] corazones;
 
-    static readonly Color colorVivo  = new Color(0.95f, 0.1f, 0.1f);
-    static readonly Color colorVacio = new Color(0.3f,  0.3f, 0.3f, 0.4f);
+    // Blanco = la poción se ve con sus colores reales; vacío = atenuada
+    static readonly Color colorVivo  = Color.white;
+    static readonly Color colorVacio = new Color(0.3f, 0.3f, 0.3f, 0.4f);
 
     void Start()
     {
