@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: d076c282467c39b49a383e502768c40b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3142234267829418495
+    second: pelicano_0
+  - first:
+      213: -3621836269172323443
+    second: pelicano_1
+  - first:
+      213: 7022945762242931802
+    second: pelicano_2
+  - first:
+      213: -3896590770996627228
+    second: pelicano_3
+  - first:
+      213: 6731953908536888194
+    second: pelicano_4
+  - first:
+      213: 1647108765805994593
+    second: pelicano_5
+  - first:
+      213: -7234083386052203841
+    second: pelicano_6
+  - first:
+      213: -8937374851158696929
+    second: pelicano_7
+  - first:
+      213: 5611204139342764305
+    second: pelicano_8
+  - first:
+      213: 8639486390740211821
+    second: pelicano_9
+  - first:
+      213: 7381319685092533436
+    second: pelicano_10
+  - first:
+      213: -9166501249718866609
+    second: pelicano_11
+  - first:
+      213: 3401557948150160439
+    second: pelicano_12
+  - first:
+      213: -1274756767017540423
+    second: pelicano_13
+  - first:
+      213: 5032179390734428103
+    second: pelicano_14
+  - first:
+      213: -3481769825614029521
+    second: pelicano_15
+  - first:
+      213: -3612682250873567239
+    second: pelicano_16
+  - first:
+      213: -8644607603634182590
+    second: pelicano_17
+  - first:
+      213: 4516457265505009696
+    second: pelicano_18
+  - first:
+      213: -5815015863967396882
+    second: pelicano_19
+  - first:
+      213: 7985044925316175787
+    second: pelicano_20
+  - first:
+      213: -277375076636028605
+    second: pelicano_21
+  - first:
+      213: -2550730367172485717
+    second: pelicano_22
+  - first:
+      213: -7844467428062669976
+    second: pelicano_23
+  - first:
+      213: -2691440449725196414
+    second: pelicano_24
+  - first:
+      213: -6753445640106464176
+    second: pelicano_25
+  - first:
+      213: -1314097814553963247
+    second: pelicano_26
+  - first:
+      213: 1821883007978354484
+    second: pelicano_27
+  - first:
+      213: -8286366180315975079
+    second: pelicano_28
+  - first:
+      213: 7950786171494097145
+    second: pelicano_29
+  - first:
+      213: 4444699504607057422
+    second: pelicano_30
+  - first:
+      213: -5584995392085435806
+    second: pelicano_31
+  - first:
+      213: 952886689399176646
+    second: pelicano_32
+  - first:
+      213: 2491628471479797469
+    second: pelicano_33
+  - first:
+      213: -4022316394370230048
+    second: pelicano_34
+  - first:
+      213: 2214151930250305147
+    second: pelicano_35
+  - first:
+      213: 8916259206923876916
+    second: pelicano_36
+  - first:
+      213: -7062547954812549585
+    second: pelicano_37
+  - first:
+      213: -6832444874565904871
+    second: pelicano_38
+  - first:
+      213: 979150173415511240
+    second: pelicano_39
+  - first:
+      213: -2019312970070309100
+    second: pelicano_40
+  - first:
+      213: -5554129440935355092
+    second: pelicano_41
+  - first:
+      213: -5819105360950825509
+    second: pelicano_42
+  - first:
+      213: -8150578260120723757
+    second: pelicano_43
+  - first:
+      213: 8580192899903629803
+    second: pelicano_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pelicano_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 404
+        height: 392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff938071b657b9b20800000000000000
+      internalID: 3142234267829418495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_1
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1
+        width: 421
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b8b5d3a17acbdc0800000000000000
+      internalID: -3621836269172323443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_2
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 0
+        width: 403
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c235b26f3867160800000000000000
+      internalID: 7022945762242931802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_3
+      rect:
+        serializedVersion: 2
+        x: 2528
+        y: 0
+        width: 571
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e83eabb6578ce9c0800000000000000
+      internalID: -3896590770996627228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_4
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 0
+        width: 514
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bc4a29964bc6d50800000000000000
+      internalID: 6731953908536888194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_11
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 0
+        width: 453
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d2559fdab0ac080800000000000000
+      internalID: -9166501249718866609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_12
+      rect:
+        serializedVersion: 2
+        x: 3704
+        y: 0
+        width: 407
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c956e7ee2c43f20800000000000000
+      internalID: 3401557948150160439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_13
+      rect:
+        serializedVersion: 2
+        x: 4157
+        y: 0
+        width: 424
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b4e4ee69772f4ee0800000000000000
+      internalID: -1274756767017540423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_14
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 0
+        width: 406
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c764c68e74e5d540800000000000000
+      internalID: 5032179390734428103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_15
+      rect:
+        serializedVersion: 2
+        x: 5084
+        y: 0
+        width: 392
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d1a927ac44eafc0800000000000000
+      internalID: -3481769825614029521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_16
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 0
+        width: 395
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7825632ac2dddc0800000000000000
+      internalID: -3612682250873567239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_18
+      rect:
+        serializedVersion: 2
+        x: 5971
+        y: 0
+        width: 398
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02088a924fdadae30800000000000000
+      internalID: 4516457265505009696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_19
+      rect:
+        serializedVersion: 2
+        x: 6398
+        y: 0
+        width: 380
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb46f881e9ec4fa0800000000000000
+      internalID: -5815015863967396882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pelicano_21
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 433
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341109f56d0962cf0800000000000000
+      internalID: -277375076636028605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 65c540fa1a4bec2408cbcc42c7710b10
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      pelicano_0: 3142234267829418495
+      pelicano_1: -3621836269172323443
+      pelicano_10: 7381319685092533436
+      pelicano_11: -9166501249718866609
+      pelicano_12: 3401557948150160439
+      pelicano_13: -1274756767017540423
+      pelicano_14: 5032179390734428103
+      pelicano_15: -3481769825614029521
+      pelicano_16: -3612682250873567239
+      pelicano_17: -8644607603634182590
+      pelicano_18: 4516457265505009696
+      pelicano_19: -5815015863967396882
+      pelicano_2: 7022945762242931802
+      pelicano_20: 7985044925316175787
+      pelicano_21: -277375076636028605
+      pelicano_22: -2550730367172485717
+      pelicano_23: -7844467428062669976
+      pelicano_24: -2691440449725196414
+      pelicano_25: -6753445640106464176
+      pelicano_26: -1314097814553963247
+      pelicano_27: 1821883007978354484
+      pelicano_28: -8286366180315975079
+      pelicano_29: 7950786171494097145
+      pelicano_3: -3896590770996627228
+      pelicano_30: 4444699504607057422
+      pelicano_31: -5584995392085435806
+      pelicano_32: 952886689399176646
+      pelicano_33: 2491628471479797469
+      pelicano_34: -4022316394370230048
+      pelicano_35: 2214151930250305147
+      pelicano_36: 8916259206923876916
+      pelicano_37: -7062547954812549585
+      pelicano_38: -6832444874565904871
+      pelicano_39: 979150173415511240
+      pelicano_4: 6731953908536888194
+      pelicano_40: -2019312970070309100
+      pelicano_41: -5554129440935355092
+      pelicano_42: -5819105360950825509
+      pelicano_43: -8150578260120723757
+      pelicano_44: 8580192899903629803
+      pelicano_5: 1647108765805994593
+      pelicano_6: -7234083386052203841
+      pelicano_7: -8937374851158696929
+      pelicano_8: 5611204139342764305
+      pelicano_9: 8639486390740211821
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

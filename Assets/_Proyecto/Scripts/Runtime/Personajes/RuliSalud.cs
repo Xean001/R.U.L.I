@@ -13,11 +13,19 @@ public class RuliSalud : MonoBehaviour
     private RuliMovimiento movimiento;
     private SpriteRenderer sr;
 
+    [Header("Audio")]
+    public AudioClip sonidoRecibirDaño;
+    private AudioSource audioSource;
+
     void Awake()
     {
         VidaActual  = vidaMaxima;
         movimiento  = GetComponent<RuliMovimiento>();
         sr          = GetComponent<SpriteRenderer>();
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -39,6 +47,14 @@ public class RuliSalud : MonoBehaviour
         VidaActual = Mathf.Max(0, VidaActual - cantidad);
         timerInvul = tiempoInvulnerable;
         OnVidaCambiada?.Invoke(VidaActual, vidaMaxima);
+
+        // SONIDO DE DAÑO
+        if (audioSource != null && sonidoRecibirDaño != null)
+        {
+            audioSource.PlayOneShot(sonidoRecibirDaño);
+        }
+
+
         if (VidaActual <= 0 && movimiento != null)
             movimiento.Morir();
     }

@@ -175,6 +175,12 @@ public class RuliMovimiento : MonoBehaviour
 
             var escudo = c.GetComponent<EscudoEnemigo>();
             if (escudo != null) escudo.Golpe();
+
+            var pelicano = c.GetComponent<EnemigoPelicano>();
+            if (pelicano != null) pelicano.Golpe();
+
+            var librero = c.GetComponent<EnemigoLibreroJefe>();
+            if (librero != null) librero.Golpe();
         }
     }
 
@@ -200,7 +206,17 @@ public class RuliMovimiento : MonoBehaviour
             anim.ResetTrigger("muerto");
             anim.SetTrigger("muerto");
         }
-        Invoke(nameof(Reiniciar), retrasoReinicio);
+        // ACTIVAR GAME OVER 
+        var gameOverController = FindFirstObjectByType<GameOverController>();
+        if (gameOverController != null)
+        {
+            gameOverController.MostrarGameOver();
+        }
+        else
+        {
+            // Si no hay GameOverController, reiniciar como antes
+            Invoke(nameof(Reiniciar), retrasoReinicio);
+        }
     }
 
     void Reiniciar()

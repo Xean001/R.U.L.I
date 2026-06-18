@@ -8,9 +8,20 @@ public class MonedaEcologia : MonoBehaviour
 
     private Vector3 posBase;
 
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip sonidoAparicion;
+    public AudioClip sonidoRecoleccion;
+
     void Start()
     {
         posBase = transform.position;
+
+        if (audioSource != null && sonidoAparicion != null)
+        {
+            audioSource.PlayOneShot(sonidoAparicion);
+        }
     }
 
     void Update()
@@ -23,6 +34,13 @@ public class MonedaEcologia : MonoBehaviour
     {
         if (other.GetComponent<RuliMovimiento>() == null) return;
         ContadorMonedas.Instance?.Agregar(1);
+
+        // SONIDO DE RECOLECCIÓN
+        if (audioSource != null && sonidoRecoleccion != null)
+        {
+            audioSource.PlayOneShot(sonidoRecoleccion);
+        }
+
         StartCoroutine(Recolectar());
     }
 

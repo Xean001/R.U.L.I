@@ -6,6 +6,13 @@ using System.Collections;
 [RequireComponent(typeof(SpriteRenderer))]
 public class EscudoEnemigo : MonoBehaviour
 {
+
+    [Header("Audio")]
+    public AudioClip sonidoAparicion;
+    public AudioClip sonidoGolpeRecibido;
+    private AudioSource audioSource;
+    private bool yaSonoAparicion;
+
     [Header("Movimiento")]
     public float velocidad       = 0.6f;
     public float rangoPatrulla   = 3f;
@@ -33,6 +40,9 @@ public class EscudoEnemigo : MonoBehaviour
     private int     ultimoFrameGolpe = -1;   // evita doble conteo (2 colliders)
     private bool    atacando;
     private bool    muerto;
+    public int nivelActual = 1;
+
+
 
     void Awake()
     {
@@ -42,6 +52,11 @@ public class EscudoEnemigo : MonoBehaviour
         posInicial = transform.position;
         rb.gravityScale = 3f;
         rb.constraints  = RigidbodyConstraints2D.FreezeRotation;
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+        yaSonoAparicion = false;
     }
 
     void Start()
@@ -134,6 +149,13 @@ public class EscudoEnemigo : MonoBehaviour
         {
             vidaUI.Mostrar();
             vidaUI.SetVida((float)vida / vidaMax);
+
+            // SONIDO DE APARICIÓN 
+            if (!yaSonoAparicion && audioSource != null && sonidoAparicion != null)
+            {
+                audioSource.PlayOneShot(sonidoAparicion);
+                yaSonoAparicion = true;
+            }
         }
         else
         {
@@ -162,6 +184,13 @@ public class EscudoEnemigo : MonoBehaviour
 
         anim.SetFloat("velocidadX", 0f);
         anim.SetTrigger("atacar");
+
+        // SONIDO DE ATAQUE DEL ENEMIGO (cuando va a golpearte)
+        if (audioSource != null && sonidoGolpeRecibido != null)
+        {
+            audioSource.PlayOneShot(sonidoGolpeRecibido, 1.5f); // Volumen aumentado a 1.5
+        }
+
 
         // Punto de daño: 60% de la animacion
         yield return new WaitForSeconds(duracionAtaque * 0.6f);
@@ -194,6 +223,8 @@ public class EscudoEnemigo : MonoBehaviour
         StopCoroutine("Sacudir");
         StartCoroutine(Sacudir());
 
+       
+
         if (vida <= 0) Morir();
     }
 
@@ -205,9 +236,12 @@ public class EscudoEnemigo : MonoBehaviour
         anim.SetFloat("velocidadX", 0f);
         if (vidaUI != null) vidaUI.Ocultar();
 
-        // Jefe derrotado -> pantalla de victoria + ir al menu de niveles
-        var victoria = FindFirstObjectByType<VictoriaNivel>();
-        if (victoria != null) victoria.Ganar();
+        var victoryController = FindFirstObjectByType<VictoryController>();
+        if (victoryController != null)
+        {
+            victoryController.nivelActual = nivelActual; 
+            victoryController.MostrarVictoria();
+        }
 
         StopAllCoroutines();
         StartCoroutine(Desaparecer());

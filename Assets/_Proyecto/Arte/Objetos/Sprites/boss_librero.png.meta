@@ -1,0 +1,614 @@
+fileFormatVersion: 2
+guid: 38160e834595ab44f8557ce9b50a8eff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8904543170129474414
+    second: boss_librero_0
+  - first:
+      213: 8833316498728628916
+    second: boss_librero_1
+  - first:
+      213: 9035749653377034870
+    second: boss_librero_2
+  - first:
+      213: 1710765980487886389
+    second: boss_librero_3
+  - first:
+      213: 4560379820129813123
+    second: boss_librero_4
+  - first:
+      213: 2138468711546843539
+    second: boss_librero_5
+  - first:
+      213: 835880599155216256
+    second: boss_librero_6
+  - first:
+      213: -6312130041692044048
+    second: boss_librero_7
+  - first:
+      213: -6806276041879495306
+    second: boss_librero_8
+  - first:
+      213: 7290061330001863847
+    second: boss_librero_9
+  - first:
+      213: 2416316921893129690
+    second: boss_librero_10
+  - first:
+      213: 758333415404775185
+    second: boss_librero_11
+  - first:
+      213: 7816008464555218197
+    second: boss_librero_12
+  - first:
+      213: 6123390046619913858
+    second: boss_librero_13
+  - first:
+      213: 7660501809958122385
+    second: boss_librero_14
+  - first:
+      213: 5740288616500373153
+    second: boss_librero_15
+  - first:
+      213: 8789252014241738549
+    second: boss_librero_16
+  - first:
+      213: -5376149429542927237
+    second: boss_librero_17
+  - first:
+      213: 2083993416755352704
+    second: boss_librero_18
+  - first:
+      213: -999670706641901117
+    second: boss_librero_19
+  - first:
+      213: -1335297655150875627
+    second: boss_librero_20
+  - first:
+      213: -3818355190269182572
+    second: boss_librero_21
+  - first:
+      213: 7464170824659760572
+    second: boss_librero_22
+  - first:
+      213: 3730864898215440354
+    second: boss_librero_23
+  - first:
+      213: -5303258865221334185
+    second: boss_librero_24
+  - first:
+      213: -4374913270273043399
+    second: boss_librero_25
+  - first:
+      213: 742770825316775361
+    second: boss_librero_26
+  - first:
+      213: 1581590735394640171
+    second: boss_librero_27
+  - first:
+      213: 7325635570692136915
+    second: boss_librero_28
+  - first:
+      213: -7679547403015236143
+    second: boss_librero_29
+  - first:
+      213: -481599812269670911
+    second: boss_librero_30
+  - first:
+      213: -4486326414509470392
+    second: boss_librero_31
+  - first:
+      213: -8834501965713127630
+    second: boss_librero_32
+  - first:
+      213: -2702744914451570300
+    second: boss_librero_33
+  - first:
+      213: 3619742090896861936
+    second: boss_librero_34
+  - first:
+      213: 6235775044283945489
+    second: boss_librero_35
+  - first:
+      213: -8203360319827899400
+    second: boss_librero_36
+  - first:
+      213: 6447095808265477705
+    second: boss_librero_37
+  - first:
+      213: 6527659641472926415
+    second: boss_librero_38
+  - first:
+      213: 2237393923283323839
+    second: boss_librero_39
+  - first:
+      213: 7988018796174466874
+    second: boss_librero_40
+  - first:
+      213: -3346791923370464711
+    second: boss_librero_41
+  - first:
+      213: 8557033320165569230
+    second: boss_librero_42
+  - first:
+      213: -4835704575673233708
+    second: boss_librero_43
+  - first:
+      213: -447445350284009573
+    second: boss_librero_44
+  - first:
+      213: 8808100792728675320
+    second: boss_librero_45
+  - first:
+      213: -3454933687744252289
+    second: boss_librero_46
+  - first:
+      213: -5262392252778195027
+    second: boss_librero_47
+  - first:
+      213: 7751951982005263922
+    second: boss_librero_48
+  - first:
+      213: 3028737024341111049
+    second: boss_librero_49
+  - first:
+      213: -1886632746000045835
+    second: boss_librero_50
+  - first:
+      213: -1372292598212884149
+    second: boss_librero_51
+  - first:
+      213: 2119048859792309344
+    second: boss_librero_52
+  - first:
+      213: 2366155521220903776
+    second: boss_librero_53
+  - first:
+      213: 12963708840501931
+    second: boss_librero_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_librero_2
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 880
+        width: 386
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67aa5e0bf6e656d70800000000000000
+      internalID: 9035749653377034870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 880
+        width: 347
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536adc0689cddb710800000000000000
+      internalID: 1710765980487886389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_4
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 880
+        width: 342
+        height: 377
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38282b3d849b94f30800000000000000
+      internalID: 4560379820129813123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_5
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 880
+        width: 337
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391790b86fd5dad10800000000000000
+      internalID: 2138468711546843539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_6
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 880
+        width: 325
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f894be9f4a99b00800000000000000
+      internalID: 835880599155216256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_7
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 880
+        width: 342
+        height: 377
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f4cfd09b2fc668a0800000000000000
+      internalID: -6312130041692044048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_15
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 441
+        width: 501
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a629b6551a99af40800000000000000
+      internalID: 5740288616500373153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_16
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 441
+        width: 542
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53fe346b322b9f970800000000000000
+      internalID: 8789252014241738549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_17
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 440
+        width: 568
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74cca0f3941465b0800000000000000
+      internalID: -5376149429542927237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_38
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 12
+        width: 463
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2c5a0ebd7e69a50800000000000000
+      internalID: 6527659641472926415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 21
+        width: 538
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb8be34be1dc0f10800000000000000
+      internalID: 2237393923283323839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_librero_41
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 32
+        width: 433
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a6b5e4a7ecd81d0800000000000000
+      internalID: -3346791923370464711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e73b6c1c72cb81e4793106ae53e9f20b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss_librero_0: -8904543170129474414
+      boss_librero_1: 8833316498728628916
+      boss_librero_10: 2416316921893129690
+      boss_librero_11: 758333415404775185
+      boss_librero_12: 7816008464555218197
+      boss_librero_13: 6123390046619913858
+      boss_librero_14: 7660501809958122385
+      boss_librero_15: 5740288616500373153
+      boss_librero_16: 8789252014241738549
+      boss_librero_17: -5376149429542927237
+      boss_librero_18: 2083993416755352704
+      boss_librero_19: -999670706641901117
+      boss_librero_2: 9035749653377034870
+      boss_librero_20: -1335297655150875627
+      boss_librero_21: -3818355190269182572
+      boss_librero_22: 7464170824659760572
+      boss_librero_23: 3730864898215440354
+      boss_librero_24: -5303258865221334185
+      boss_librero_25: -4374913270273043399
+      boss_librero_26: 742770825316775361
+      boss_librero_27: 1581590735394640171
+      boss_librero_28: 7325635570692136915
+      boss_librero_29: -7679547403015236143
+      boss_librero_3: 1710765980487886389
+      boss_librero_30: -481599812269670911
+      boss_librero_31: -4486326414509470392
+      boss_librero_32: -8834501965713127630
+      boss_librero_33: -2702744914451570300
+      boss_librero_34: 3619742090896861936
+      boss_librero_35: 6235775044283945489
+      boss_librero_36: -8203360319827899400
+      boss_librero_37: 6447095808265477705
+      boss_librero_38: 6527659641472926415
+      boss_librero_39: 2237393923283323839
+      boss_librero_4: 4560379820129813123
+      boss_librero_40: 7988018796174466874
+      boss_librero_41: -3346791923370464711
+      boss_librero_42: 8557033320165569230
+      boss_librero_43: -4835704575673233708
+      boss_librero_44: -447445350284009573
+      boss_librero_45: 8808100792728675320
+      boss_librero_46: -3454933687744252289
+      boss_librero_47: -5262392252778195027
+      boss_librero_48: 7751951982005263922
+      boss_librero_49: 3028737024341111049
+      boss_librero_5: 2138468711546843539
+      boss_librero_50: -1886632746000045835
+      boss_librero_51: -1372292598212884149
+      boss_librero_52: 2119048859792309344
+      boss_librero_53: 2366155521220903776
+      boss_librero_54: 12963708840501931
+      boss_librero_6: 835880599155216256
+      boss_librero_7: -6312130041692044048
+      boss_librero_8: -6806276041879495306
+      boss_librero_9: 7290061330001863847
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

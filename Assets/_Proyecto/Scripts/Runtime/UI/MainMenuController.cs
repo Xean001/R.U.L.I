@@ -2,29 +2,47 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using TMPro;
+using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    public TextMeshProUGUI[] menuItems;
-    public TextMeshProUGUI arrowIndicator;
+    [Header("Botones del Menú")]
+    public Button[] botones;
 
+    [Header("Escenas")]
     public string sceneJugar = "Nivel1";
     public string sceneNiveles = "Niveles";
     public string sceneCreditos = "Creditos";
 
-    [Header("Flecha")]
-    public float velocidadParpadeo = 0.4f;
+    [Header("Animación de Botón")]
+    public float escalaMinima = 1f;
+    public float escalaMaxima = 1.15f;
+    public float velocidadPulse = 3f;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip sonidoNavegacion;
+    public AudioClip sonidoSeleccion;
 
     private int indiceActual = 0;
     private bool puedeNavegar = true;
-    private bool flechaVisible = true;
-    private Coroutine coroutineParpadeo;
+    private Coroutine coroutinePulse;
+    private Vector3 escalaOriginal;
 
     private void Start()
     {
+        // Guardar escala original de todos los botones
+        foreach (var boton in botones)
+        {
+            if (boton != null)
+            {
+                boton.transform.localScale = Vector3.one;
+            }
+        }
+
+        // Iniciar en el primer botón
+        indiceActual = 0;
         ActualizarSeleccion();
-        coroutineParpadeo = StartCoroutine(ParpadearFlecha());
     }
 
     private void Update()
@@ -34,17 +52,22 @@ public class MainMenuController : MonoBehaviour
         var teclado = Keyboard.current;
         if (teclado == null) return;
 
+        // Navegación hacia arriba
         if (teclado.upArrowKey.wasPressedThisFrame || teclado.wKey.wasPressedThisFrame)
         {
-            indiceActual = (indiceActual - 1 + menuItems.Length) % menuItems.Length;
+            indiceActual = (indiceActual - 1 + botones.Length) % botones.Length;
+            ReproducirSonidoNavegacion();
             ActualizarSeleccion();
         }
+        // Navegación hacia abajo
         else if (teclado.downArrowKey.wasPressedThisFrame || teclado.sKey.wasPressedThisFrame)
         {
-            indiceActual = (indiceActual + 1) % menuItems.Length;
+            indiceActual = (indiceActual + 1) % botones.Length;
+            ReproducirSonidoNavegacion();
             ActualizarSeleccion();
         }
 
+        // Selección
         if (teclado.enterKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame)
         {
             SeleccionarOpcion();
@@ -53,35 +76,82 @@ public class MainMenuController : MonoBehaviour
 
     private void ActualizarSeleccion()
     {
-        PosicionarFlecha();
+        // Detener animación del botón anterior
+        if (coroutinePulse != null)
+        {
+            StopCoroutine(coroutinePulse);
+            coroutinePulse = null;
+        }
+
+        // Resetear escala de todos los botones
+        foreach (var boton in botones)
+        {
+            if (boton != null)
+            {
+                boton.transform.localScale = Vector3.one;
+            }
+        }
+
+        // Iniciar animación en el botón seleccionado
+        if (botones[indiceActual] != null)
+        {
+            escalaOriginal = botones[indiceActual].transform.localScale;
+            coroutinePulse = StartCoroutine(AnimacionPulse(botones[indiceActual]));
+        }
     }
 
-    private void PosicionarFlecha()
+    private IEnumerator AnimacionPulse(Button boton)
     {
-        if (arrowIndicator == null || menuItems.Length == 0) return;
+        float tiempo = 0f;
 
-        RectTransform rectItem = menuItems[indiceActual].GetComponent<RectTransform>();
-        RectTransform rectArrow = arrowIndicator.GetComponent<RectTransform>();
-
-        rectArrow.anchoredPosition = new Vector2(600, rectItem.anchoredPosition.y);
-    }
-
-    private IEnumerator ParpadearFlecha()
-    {
         while (true)
         {
-            flechaVisible = !flechaVisible;
-            if (arrowIndicator != null)
-                arrowIndicator.enabled = flechaVisible;
-            yield return new WaitForSeconds(velocidadParpadeo);
+            tiempo += Time.deltaTime * velocidadPulse;
+
+            // Calcular escala usando función sinusoidal
+            float escala = escalaMinima + (escalaMaxima - escalaMinima) * (Mathf.Sin(tiempo) * 0.5f + 0.5f);
+
+            // Aplicar escala manteniendo la proporción original
+            Vector3 nuevaEscala = escalaOriginal * escala;
+            boton.transform.localScale = nuevaEscala;
+
+            yield return null;
+        }
+    }
+
+    private void ReproducirSonidoNavegacion()
+    {
+        if (audioSource != null && sonidoNavegacion != null)
+        {
+            audioSource.PlayOneShot(sonidoNavegacion);
+        }
+    }
+
+    private void ReproducirSonidoSeleccion()
+    {
+        if (audioSource != null && sonidoSeleccion != null)
+        {
+            audioSource.PlayOneShot(sonidoSeleccion);
         }
     }
 
     private void SeleccionarOpcion()
     {
         puedeNavegar = false;
-        if (coroutineParpadeo != null) StopCoroutine(coroutineParpadeo);
-        if (arrowIndicator != null) arrowIndicator.enabled = true;
+        ReproducirSonidoSeleccion();
+
+        // Detener animación
+        if (coroutinePulse != null)
+        {
+            StopCoroutine(coroutinePulse);
+            coroutinePulse = null;
+        }
+
+        // Efecto visual de confirmación (escala máxima momentánea)
+        if (botones[indiceActual] != null)
+        {
+            botones[indiceActual].transform.localScale = escalaOriginal * escalaMaxima;
+        }
 
         switch (indiceActual)
         {
@@ -95,7 +165,7 @@ public class MainMenuController : MonoBehaviour
     private IEnumerator CargarEscena(string nombreEscena)
     {
         Debug.Log(">>> Cargando escena: " + nombreEscena + " | indice: " + indiceActual);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f); // Esperar para que se vea el efecto
         SceneManager.LoadScene(nombreEscena);
     }
 
