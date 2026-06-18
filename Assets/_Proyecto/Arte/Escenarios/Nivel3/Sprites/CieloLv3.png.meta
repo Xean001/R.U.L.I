@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: 75258d17dd15040e29672d871220d6b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5163779029508842718
+    second: CieloLv3_0
+  - first:
+      213: -2838985617997233474
+    second: CieloLv3_1
+  - first:
+      213: -7897946704419530839
+    second: CieloLv3_2
+  - first:
+      213: 8944139738037799254
+    second: CieloLv3_3
+  - first:
+      213: 2096553485010551896
+    second: CieloLv3_4
+  - first:
+      213: 5048781085381658441
+    second: CieloLv3_5
+  - first:
+      213: -6801345509988030012
+    second: CieloLv3_6
+  - first:
+      213: 7175844794453500793
+    second: CieloLv3_7
+  - first:
+      213: -8608677998261413796
+    second: CieloLv3_8
+  - first:
+      213: -1163049123129755196
+    second: CieloLv3_9
+  - first:
+      213: 6550456766806139042
+    second: CieloLv3_10
+  - first:
+      213: -1045394087877516654
+    second: CieloLv3_11
+  - first:
+      213: -4277209752234554101
+    second: CieloLv3_12
+  - first:
+      213: 2214678981945375739
+    second: CieloLv3_13
+  - first:
+      213: 2940199058800001691
+    second: CieloLv3_14
+  - first:
+      213: -3114691848698455379
+    second: CieloLv3_15
+  - first:
+      213: -2545947168281595504
+    second: CieloLv3_16
+  - first:
+      213: -7191030870502452973
+    second: CieloLv3_17
+  - first:
+      213: 9219093547568560182
+    second: CieloLv3_18
+  - first:
+      213: 2155727448145306220
+    second: CieloLv3_19
+  - first:
+      213: -4669080831867123762
+    second: CieloLv3_20
+  - first:
+      213: -6592311098326072697
+    second: CieloLv3_21
+  - first:
+      213: -3435922669247685266
+    second: CieloLv3_22
+  - first:
+      213: 2246211762590523044
+    second: CieloLv3_23
+  - first:
+      213: 1656165245455832500
+    second: CieloLv3_24
+  - first:
+      213: -4471370531487486865
+    second: CieloLv3_25
+  - first:
+      213: 8699139795084617082
+    second: CieloLv3_26
+  - first:
+      213: -7675017295184077663
+    second: CieloLv3_27
+  - first:
+      213: -4079875752759825250
+    second: CieloLv3_28
+  - first:
+      213: 3071792061199793461
+    second: CieloLv3_29
+  - first:
+      213: -2389828645720929355
+    second: CieloLv3_30
+  - first:
+      213: 2856364940604427635
+    second: CieloLv3_31
+  - first:
+      213: -2072882932858348255
+    second: CieloLv3_32
+  - first:
+      213: -3406495652022382485
+    second: CieloLv3_33
+  - first:
+      213: 6390979186660608892
+    second: CieloLv3_34
+  - first:
+      213: 7859794470110728714
+    second: CieloLv3_35
+  - first:
+      213: 1378424089659523156
+    second: CieloLv3_36
+  - first:
+      213: 5246951096746482422
+    second: CieloLv3_37
+  - first:
+      213: -7865940533258491104
+    second: CieloLv3_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CieloLv3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1536
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b938fd4529658b0800000000000000
+      internalID: -5163779029508842718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1006
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb205dc3f95e998d0800000000000000
+      internalID: -2838985617997233474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_2
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1008
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a75b14415bd46290800000000000000
+      internalID: -7897946704419530839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_3
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1016
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659c23324b7ff1c70800000000000000
+      internalID: 8944139738037799254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_4
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1015
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85449ae5944781d10800000000000000
+      internalID: 2096553485010551896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 998
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94782e6c5afd01640800000000000000
+      internalID: 5048781085381658441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_6
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1000
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c927723b44cc91a0800000000000000
+      internalID: -6801345509988030012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_7
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1007
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973acb042d8b59360800000000000000
+      internalID: 7175844794453500793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 990
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5858e7a8f4d78880800000000000000
+      internalID: -8608677998261413796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_9
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 992
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9758f0cf40cdfe0800000000000000
+      internalID: -1163049123129755196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_10
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 991
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0a80e39b5e7ea50800000000000000
+      internalID: 6550456766806139042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_11
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 999
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29264c5ad930e71f0800000000000000
+      internalID: -1045394087877516654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_12
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 994
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d0938546c44a4c0800000000000000
+      internalID: -4277209752234554101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 982
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfbb06adcce1cbe10800000000000000
+      internalID: 2214678981945375739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_14
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 984
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9246b4577fadc820800000000000000
+      internalID: 2940199058800001691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_15
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 982
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa1685144466c4d0800000000000000
+      internalID: -3114691848698455379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_16
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 986
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091f9a91a8afaacd0800000000000000
+      internalID: -2545947168281595504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_17
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 987
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31155d2e583543c90800000000000000
+      internalID: -7191030870502452973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_18
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 974
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6387be59cbcc0ff70800000000000000
+      internalID: 9219093547568560182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_19
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 976
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c62a24b41beaaed10800000000000000
+      internalID: 2155727448145306220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_20
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 976
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec789f4a8b7143fb0800000000000000
+      internalID: -4669080831867123762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_21
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 976
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782c86fcbf76384a0800000000000000
+      internalID: -6592311098326072697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_22
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 968
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d97cf59862150d0800000000000000
+      internalID: -3435922669247685266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_23
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 973
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae138772b52c2f10800000000000000
+      internalID: 2246211762590523044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_24
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 970
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b51eb81481ebf610800000000000000
+      internalID: 1656165245455832500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_25
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 972
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ce983213082f1c0800000000000000
+      internalID: -4471370531487486865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 69
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75ab79bd8d89b870800000000000000
+      internalID: 8699139795084617082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_27
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 62
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1acd29b1f6cdc7590800000000000000
+      internalID: -7675017295184077663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 54
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c65057e9e5167c0800000000000000
+      internalID: -4079875752759825250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_29
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 56
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53dbda7ca9231aa20800000000000000
+      internalID: 3071792061199793461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_30
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 56
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb40c1328f95ded0800000000000000
+      internalID: -2389828645720929355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 46
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d4b91a7c8d3a720800000000000000
+      internalID: 2856364940604427635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 38
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d120684f3ab33e0800000000000000
+      internalID: -2072882932858348255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_33
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 43
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b601b4cb042b9b0d0800000000000000
+      internalID: -3406495652022382485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_34
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 30
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b02db95b151b850800000000000000
+      internalID: 6390979186660608892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 22
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0297867d69931d60800000000000000
+      internalID: 7859794470110728714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_36
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 13
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4504ff50865212310800000000000000
+      internalID: 1378424089659523156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa9b63193ae0d840800000000000000
+      internalID: 5246951096746482422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CieloLv3_38
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02be7c2b2c096d290800000000000000
+      internalID: -7865940533258491104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CieloLv3_0: -5163779029508842718
+      CieloLv3_1: -2838985617997233474
+      CieloLv3_10: 6550456766806139042
+      CieloLv3_11: -1045394087877516654
+      CieloLv3_12: -4277209752234554101
+      CieloLv3_13: 2214678981945375739
+      CieloLv3_14: 2940199058800001691
+      CieloLv3_15: -3114691848698455379
+      CieloLv3_16: -2545947168281595504
+      CieloLv3_17: -7191030870502452973
+      CieloLv3_18: 9219093547568560182
+      CieloLv3_19: 2155727448145306220
+      CieloLv3_2: -7897946704419530839
+      CieloLv3_20: -4669080831867123762
+      CieloLv3_21: -6592311098326072697
+      CieloLv3_22: -3435922669247685266
+      CieloLv3_23: 2246211762590523044
+      CieloLv3_24: 1656165245455832500
+      CieloLv3_25: -4471370531487486865
+      CieloLv3_26: 8699139795084617082
+      CieloLv3_27: -7675017295184077663
+      CieloLv3_28: -4079875752759825250
+      CieloLv3_29: 3071792061199793461
+      CieloLv3_3: 8944139738037799254
+      CieloLv3_30: -2389828645720929355
+      CieloLv3_31: 2856364940604427635
+      CieloLv3_32: -2072882932858348255
+      CieloLv3_33: -3406495652022382485
+      CieloLv3_34: 6390979186660608892
+      CieloLv3_35: 7859794470110728714
+      CieloLv3_36: 1378424089659523156
+      CieloLv3_37: 5246951096746482422
+      CieloLv3_38: -7865940533258491104
+      CieloLv3_4: 2096553485010551896
+      CieloLv3_5: 5048781085381658441
+      CieloLv3_6: -6801345509988030012
+      CieloLv3_7: 7175844794453500793
+      CieloLv3_8: -8608677998261413796
+      CieloLv3_9: -1163049123129755196
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
