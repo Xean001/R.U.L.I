@@ -35,6 +35,9 @@ public class CreditsController : MonoBehaviour
 
     private void Start()
     {
+        if (btnVolverMenu != null)
+            btnVolverMenu.onClick.AddListener(VolverAlMenuPorClick);
+
         // Iniciar animación del botón
         if (btnVolverMenu != null)
         {
@@ -43,15 +46,21 @@ public class CreditsController : MonoBehaviour
         }
     }
 
+    private void VolverAlMenuPorClick()
+    {
+        if (!puedeNavegar) return;
+
+        ReproducirSonido(sonidoSeleccion);
+        VolverAlMenu();
+    }
+
     private void Update()
     {
         if (!puedeNavegar) return;
 
-        var teclado = Keyboard.current;
-        if (teclado == null) return;
 
         // Selección con Enter o Espacio
-        if (teclado.enterKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame)
+        if (RuliInput.SubmitPresionado() || RuliInput.CancelPresionado())
         {
             ReproducirSonido(sonidoSeleccion);
             VolverAlMenu();

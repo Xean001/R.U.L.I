@@ -20,22 +20,7 @@ public class ruliprueba : MonoBehaviour
 
 	private void Update()
 	{
-		inputX = 0f;
-
-		Keyboard keyboard = Keyboard.current;
-		if (keyboard == null)
-		{
-			return;
-		}
-
-		if (keyboard.rightArrowKey.isPressed)
-		{
-			inputX = 1f;
-		}
-		else if (keyboard.leftArrowKey.isPressed)
-		{
-			inputX = -1f;
-		}
+		inputX = RuliInput.MovimientoHorizontal();
 	}
 
 	private void FixedUpdate()

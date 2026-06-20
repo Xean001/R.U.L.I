@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class LevelCard : MonoBehaviour
+public class LevelCard : MonoBehaviour, IPointerClickHandler
 {
     [Header("Nivel")]
     public int numeroNivel = 1;
@@ -22,6 +23,7 @@ public class LevelCard : MonoBehaviour
 
     private bool estaDesbloqueado;
     private Vector3 escalaNormal;
+    private LevelSelectController selector;
 
     private void Awake()
     {
@@ -41,6 +43,19 @@ public class LevelCard : MonoBehaviour
 
     public bool EstaDesbloqueado() => estaDesbloqueado;
     public string GetNombreEscena() => nombreEscena;
+
+    public void ConfigurarSelector(LevelSelectController levelSelector)
+    {
+        selector = levelSelector;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (selector == null)
+            selector = FindAnyObjectByType<LevelSelectController>();
+
+        selector?.SeleccionarCarta(this);
+    }
 
     public void Seleccionar()
     {

@@ -46,17 +46,12 @@ public class RuliMovimiento : MonoBehaviour
     {
         if (estaMuerto) return;
 
-        var teclado = Keyboard.current;
-        if (teclado == null) return;
+        movimientoHorizontal = RuliInput.MovimientoHorizontal();
 
-        movimientoHorizontal = 0f;
-        if (teclado.dKey.isPressed || teclado.rightArrowKey.isPressed) movimientoHorizontal = 1f;
-        if (teclado.aKey.isPressed || teclado.leftArrowKey.isPressed) movimientoHorizontal = -1f;
-
-        if ((teclado.wKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame) && estaEnSuelo)
+        if (RuliInput.SaltoPresionado() && estaEnSuelo)
             saltoPendiente = true;
 
-        if (teclado.fKey.wasPressedThisFrame)
+        if (RuliInput.AtaquePresionado())
             Atacar();
 
         VoltearPersonaje();

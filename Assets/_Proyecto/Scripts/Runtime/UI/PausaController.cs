@@ -50,6 +50,7 @@ public class PausaController : MonoBehaviour
 
         // Configurar botones
         botones = new Button[] { btnRenudar, btnReintentar, btnSalir };
+        ConfigurarClicks();
 
         // AudioSource
         audioSource = GetComponent<AudioSource>();
@@ -57,13 +58,32 @@ public class PausaController : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
     }
 
+    private void ConfigurarClicks()
+    {
+        if (btnRenudar != null)
+            btnRenudar.onClick.AddListener(() => SeleccionarOpcionPorClick(0));
+        if (btnReintentar != null)
+            btnReintentar.onClick.AddListener(() => SeleccionarOpcionPorClick(1));
+        if (btnSalir != null)
+            btnSalir.onClick.AddListener(() => SeleccionarOpcionPorClick(2));
+    }
+
+    private void SeleccionarOpcionPorClick(int indice)
+    {
+        if (!puedeNavegar || animando) return;
+        if (botones == null || indice < 0 || indice >= botones.Length) return;
+
+        indiceActual = indice;
+        ActualizarSeleccionBotones();
+        ReproducirSonido(sonidoSeleccion);
+        SeleccionarOpcion();
+    }
+
     void Update()
     {
-        var teclado = Keyboard.current;
-        if (teclado == null) return;
 
         // Toggle pausa con tecla P
-        if (teclado.pKey.wasPressedThisFrame && !animando)
+        if ((RuliInput.PausaPresionada() || (estaPausado && RuliInput.CancelPresionado())) && !animando)
         {
             if (estaPausado)
                 CerrarPausa();
@@ -74,20 +94,20 @@ public class PausaController : MonoBehaviour
         // Navegación solo cuando está pausado
         if (!puedeNavegar) return;
 
-        if (teclado.upArrowKey.wasPressedThisFrame || teclado.wKey.wasPressedThisFrame)
+        if (RuliInput.MenuArribaPresionado())
         {
             indiceActual = (indiceActual - 1 + botones.Length) % botones.Length;
             ReproducirSonido(sonidoNavegacion);
             ActualizarSeleccionBotones();
         }
-        else if (teclado.downArrowKey.wasPressedThisFrame || teclado.sKey.wasPressedThisFrame)
+        else if (RuliInput.MenuAbajoPresionado())
         {
             indiceActual = (indiceActual + 1) % botones.Length;
             ReproducirSonido(sonidoNavegacion);
             ActualizarSeleccionBotones();
         }
 
-        if (teclado.enterKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame)
+        if (RuliInput.SubmitPresionado())
         {
             ReproducirSonido(sonidoSeleccion);
             SeleccionarOpcion();

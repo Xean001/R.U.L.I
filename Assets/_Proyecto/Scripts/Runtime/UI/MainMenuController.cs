@@ -31,6 +31,8 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
+        ConfigurarClicks();
+
         // Guardar escala original de todos los botones
         foreach (var boton in botones)
         {
@@ -48,19 +50,18 @@ public class MainMenuController : MonoBehaviour
     private void Update()
     {
         if (!puedeNavegar) return;
+        if (botones == null || botones.Length == 0) return;
 
-        var teclado = Keyboard.current;
-        if (teclado == null) return;
 
         // Navegación hacia arriba
-        if (teclado.upArrowKey.wasPressedThisFrame || teclado.wKey.wasPressedThisFrame)
+        if (RuliInput.MenuArribaPresionado())
         {
             indiceActual = (indiceActual - 1 + botones.Length) % botones.Length;
             ReproducirSonidoNavegacion();
             ActualizarSeleccion();
         }
         // Navegación hacia abajo
-        else if (teclado.downArrowKey.wasPressedThisFrame || teclado.sKey.wasPressedThisFrame)
+        else if (RuliInput.MenuAbajoPresionado())
         {
             indiceActual = (indiceActual + 1) % botones.Length;
             ReproducirSonidoNavegacion();
@@ -68,10 +69,34 @@ public class MainMenuController : MonoBehaviour
         }
 
         // Selección
-        if (teclado.enterKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame)
+        if (RuliInput.SubmitPresionado())
         {
             SeleccionarOpcion();
         }
+    }
+
+    private void ConfigurarClicks()
+    {
+        if (botones == null) return;
+
+        for (int i = 0; i < botones.Length; i++)
+        {
+            Button boton = botones[i];
+            if (boton == null) continue;
+
+            int indice = i;
+            boton.onClick.AddListener(() => SeleccionarOpcionPorClick(indice));
+        }
+    }
+
+    private void SeleccionarOpcionPorClick(int indice)
+    {
+        if (!puedeNavegar) return;
+        if (botones == null || indice < 0 || indice >= botones.Length) return;
+
+        indiceActual = indice;
+        ActualizarSeleccion();
+        SeleccionarOpcion();
     }
 
     private void ActualizarSeleccion()

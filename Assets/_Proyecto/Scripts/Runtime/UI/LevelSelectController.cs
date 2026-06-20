@@ -42,6 +42,8 @@ public class LevelSelectController : MonoBehaviour
 
     private void Start()
     {
+        ConfigurarClicks();
+
         indiceActual = PrimerDesbloqueado();
         ultimoIndiceNivel = indiceActual;
         enBotonMenu = false;
@@ -51,13 +53,12 @@ public class LevelSelectController : MonoBehaviour
     private void Update()
     {
         if (!puedeNavegar) return;
-        var teclado = Keyboard.current;
-        if (teclado == null) return;
+        if (cartas == null || cartas.Length == 0) return;
 
         // Navegación izquierda/derecha (solo en fila de niveles)
         if (!enBotonMenu)
         {
-            if (teclado.leftArrowKey.wasPressedThisFrame || teclado.aKey.wasPressedThisFrame)
+            if (RuliInput.MenuIzquierdaPresionado())
             {
                 int nuevo = BuscarAnteriorDesbloqueado(indiceActual);
                 if (nuevo != indiceActual)
@@ -68,7 +69,7 @@ public class LevelSelectController : MonoBehaviour
                     ActualizarSeleccion();
                 }
             }
-            else if (teclado.rightArrowKey.wasPressedThisFrame || teclado.dKey.wasPressedThisFrame)
+            else if (RuliInput.MenuDerechaPresionado())
             {
                 int nuevo = BuscarSiguienteDesbloqueado(indiceActual);
                 if (nuevo != indiceActual)
@@ -81,7 +82,7 @@ public class LevelSelectController : MonoBehaviour
             }
 
             // Bajar al botón de menú
-            if (teclado.downArrowKey.wasPressedThisFrame || teclado.sKey.wasPressedThisFrame)
+            if (RuliInput.MenuAbajoPresionado())
             {
                 enBotonMenu = true;
                 ReproducirSonido(sonidoNavegacion);
@@ -91,7 +92,7 @@ public class LevelSelectController : MonoBehaviour
         else
         {
             // Subir desde el botón de menú a los niveles
-            if (teclado.upArrowKey.wasPressedThisFrame || teclado.wKey.wasPressedThisFrame)
+            if (RuliInput.MenuArribaPresionado())
             {
                 enBotonMenu = false;
                 indiceActual = ultimoIndiceNivel;
@@ -101,7 +102,7 @@ public class LevelSelectController : MonoBehaviour
         }
 
         // Selección
-        if (teclado.enterKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame)
+        if (RuliInput.SubmitPresionado())
         {
             ReproducirSonido(sonidoSeleccion);
             if (enBotonMenu)
@@ -111,11 +112,57 @@ public class LevelSelectController : MonoBehaviour
         }
 
         // Escape para volver al menú
-        if (teclado.escapeKey.wasPressedThisFrame)
+        if (RuliInput.CancelPresionado())
         {
             ReproducirSonido(sonidoSeleccion);
             VolverAlMenu();
         }
+    }
+
+    private void ConfigurarClicks()
+    {
+        if (cartas != null)
+        {
+            foreach (LevelCard carta in cartas)
+            {
+                if (carta != null)
+                    carta.ConfigurarSelector(this);
+            }
+        }
+
+        if (btnVolverMenu != null)
+            btnVolverMenu.onClick.AddListener(VolverAlMenuPorClick);
+    }
+
+    public void SeleccionarCarta(LevelCard carta)
+    {
+        if (!puedeNavegar || carta == null || cartas == null) return;
+
+        int indice = System.Array.IndexOf(cartas, carta);
+        if (indice < 0) return;
+
+        enBotonMenu = false;
+        indiceActual = indice;
+        ultimoIndiceNivel = indice;
+        ActualizarSeleccion();
+
+        if (!carta.EstaDesbloqueado())
+        {
+            ReproducirSonido(sonidoNavegacion);
+            return;
+        }
+
+        ReproducirSonido(sonidoSeleccion);
+        SeleccionarNivel();
+    }
+
+    private void VolverAlMenuPorClick()
+    {
+        if (!puedeNavegar) return;
+
+        enBotonMenu = true;
+        ReproducirSonido(sonidoSeleccion);
+        VolverAlMenu();
     }
 
     private void ActualizarSeleccion()

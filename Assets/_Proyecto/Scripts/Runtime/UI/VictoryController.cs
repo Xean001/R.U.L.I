@@ -53,11 +53,31 @@ public class VictoryController : MonoBehaviour
 
         // Configurar botones
         botones = new Button[] { btnSiguienteNivel, btnMenu };
+        ConfigurarClicks();
 
         // AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    private void ConfigurarClicks()
+    {
+        if (btnSiguienteNivel != null)
+            btnSiguienteNivel.onClick.AddListener(() => SeleccionarOpcionPorClick(0));
+        if (btnMenu != null)
+            btnMenu.onClick.AddListener(() => SeleccionarOpcionPorClick(1));
+    }
+
+    private void SeleccionarOpcionPorClick(int indice)
+    {
+        if (!puedeNavegar || animando) return;
+        if (botones == null || indice < 0 || indice >= botones.Length) return;
+
+        indiceActual = indice;
+        ActualizarSeleccionBotones();
+        ReproducirSonido(sonidoSeleccion);
+        SeleccionarOpcion();
     }
 
     public void MostrarVictoria()
@@ -126,26 +146,29 @@ public class VictoryController : MonoBehaviour
     {
         if (!puedeNavegar) return;
 
-        var teclado = Keyboard.current;
-        if (teclado == null) return;
 
-        if (teclado.upArrowKey.wasPressedThisFrame || teclado.wKey.wasPressedThisFrame)
+        if (RuliInput.MenuArribaPresionado())
         {
             indiceActual = (indiceActual - 1 + botones.Length) % botones.Length;
             ReproducirSonido(sonidoNavegacion);
             ActualizarSeleccionBotones();
         }
-        else if (teclado.downArrowKey.wasPressedThisFrame || teclado.sKey.wasPressedThisFrame)
+        else if (RuliInput.MenuAbajoPresionado())
         {
             indiceActual = (indiceActual + 1) % botones.Length;
             ReproducirSonido(sonidoNavegacion);
             ActualizarSeleccionBotones();
         }
 
-        if (teclado.enterKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame)
+        if (RuliInput.SubmitPresionado())
         {
             ReproducirSonido(sonidoSeleccion);
             SeleccionarOpcion();
+        }
+        else if (RuliInput.CancelPresionado())
+        {
+            ReproducirSonido(sonidoSeleccion);
+            VolverAlMenu();
         }
     }
 
