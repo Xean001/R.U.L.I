@@ -18,9 +18,6 @@ public class LevelCard : MonoBehaviour, IPointerClickHandler
     public Image imagenEfectoSeleccion;
     public Vector2 offsetEfecto = Vector2.zero;
 
-    [Header("Marca de completado")]
-    public GameObject marcaCompletado;
-
     private bool estaDesbloqueado;
     private Vector3 escalaNormal;
     private LevelSelectController selector;
@@ -34,9 +31,6 @@ public class LevelCard : MonoBehaviour, IPointerClickHandler
 
         if (imagenEfectoSeleccion != null)
             imagenEfectoSeleccion.gameObject.SetActive(false);
-
-        if (marcaCompletado != null)
-            marcaCompletado.SetActive(PlayerPrefs.GetInt("Nivel" + numeroNivel + "Completado", 0) == 1);
 
         ActualizarVisual();
     }
