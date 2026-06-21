@@ -2,47 +2,30 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class MainMenuController : MonoBehaviour
 {
-    [Header("Botones del Menú")]
-    public Button[] botones;
+    public TextMeshProUGUI[] menuItems;
+    public TextMeshProUGUI arrowIndicator;
 
-    [Header("Escenas")]
     public string sceneJugar = "Nivel1";
     public string sceneNiveles = "Niveles";
+    public string sceneTienda = "Tienda";
     public string sceneCreditos = "Creditos";
 
-    [Header("Animación de Botón")]
-    public float escalaMinima = 1f;
-    public float escalaMaxima = 1.15f;
-    public float velocidadPulse = 3f;
-
-    [Header("Audio")]
-    public AudioSource audioSource;
-    public AudioClip sonidoNavegacion;
-    public AudioClip sonidoSeleccion;
+    [Header("Flecha")]
+    public float velocidadParpadeo = 0.4f;
 
     private int indiceActual = 0;
     private bool puedeNavegar = true;
-    private Coroutine coroutinePulse;
-    private Vector3 escalaOriginal;
+    private bool flechaVisible = true;
+    private Coroutine coroutineParpadeo;
 
     private void Start()
     {
-        // Guardar escala original de todos los botones
-        foreach (var boton in botones)
-        {
-            if (boton != null)
-            {
-                boton.transform.localScale = Vector3.one;
-            }
-        }
-
-        // Iniciar en el primer botón
-        indiceActual = 0;
         ActualizarSeleccion();
+        coroutineParpadeo = StartCoroutine(ParpadearFlecha());
     }
 
     private void Update()
@@ -52,22 +35,17 @@ public class MainMenuController : MonoBehaviour
         var teclado = Keyboard.current;
         if (teclado == null) return;
 
-        // Navegación hacia arriba
         if (teclado.upArrowKey.wasPressedThisFrame || teclado.wKey.wasPressedThisFrame)
         {
-            indiceActual = (indiceActual - 1 + botones.Length) % botones.Length;
-            ReproducirSonidoNavegacion();
+            indiceActual = (indiceActual - 1 + menuItems.Length) % menuItems.Length;
             ActualizarSeleccion();
         }
-        // Navegación hacia abajo
         else if (teclado.downArrowKey.wasPressedThisFrame || teclado.sKey.wasPressedThisFrame)
         {
-            indiceActual = (indiceActual + 1) % botones.Length;
-            ReproducirSonidoNavegacion();
+            indiceActual = (indiceActual + 1) % menuItems.Length;
             ActualizarSeleccion();
         }
 
-        // Selección
         if (teclado.enterKey.wasPressedThisFrame || teclado.spaceKey.wasPressedThisFrame)
         {
             SeleccionarOpcion();
@@ -76,97 +54,78 @@ public class MainMenuController : MonoBehaviour
 
     private void ActualizarSeleccion()
     {
-        // Detener animación del botón anterior
-        if (coroutinePulse != null)
-        {
-            StopCoroutine(coroutinePulse);
-            coroutinePulse = null;
-        }
-
-        // Resetear escala de todos los botones
-        foreach (var boton in botones)
-        {
-            if (boton != null)
-            {
-                boton.transform.localScale = Vector3.one;
-            }
-        }
-
-        // Iniciar animación en el botón seleccionado
-        if (botones[indiceActual] != null)
-        {
-            escalaOriginal = botones[indiceActual].transform.localScale;
-            coroutinePulse = StartCoroutine(AnimacionPulse(botones[indiceActual]));
-        }
+        Debug.Log("Indice = " + indiceActual +
+              " | Texto = " + menuItems[indiceActual].text);
+        PosicionarFlecha();
     }
 
-    private IEnumerator AnimacionPulse(Button boton)
+    private void PosicionarFlecha()
     {
-        float tiempo = 0f;
+        if (arrowIndicator == null || menuItems.Length == 0) return;
 
+        RectTransform rectItem = menuItems[indiceActual].GetComponent<RectTransform>();
+        RectTransform rectArrow = arrowIndicator.GetComponent<RectTransform>();
+
+        rectArrow.anchoredPosition = new Vector2(100, rectItem.anchoredPosition.y);
+    }
+
+    private IEnumerator ParpadearFlecha()
+    {
         while (true)
         {
-            tiempo += Time.deltaTime * velocidadPulse;
+            flechaVisible = !flechaVisible;
 
-            // Calcular escala usando función sinusoidal
-            float escala = escalaMinima + (escalaMaxima - escalaMinima) * (Mathf.Sin(tiempo) * 0.5f + 0.5f);
+            if (arrowIndicator != null)
+                arrowIndicator.enabled = flechaVisible;
 
-            // Aplicar escala manteniendo la proporción original
-            Vector3 nuevaEscala = escalaOriginal * escala;
-            boton.transform.localScale = nuevaEscala;
-
-            yield return null;
-        }
-    }
-
-    private void ReproducirSonidoNavegacion()
-    {
-        if (audioSource != null && sonidoNavegacion != null)
-        {
-            audioSource.PlayOneShot(sonidoNavegacion);
-        }
-    }
-
-    private void ReproducirSonidoSeleccion()
-    {
-        if (audioSource != null && sonidoSeleccion != null)
-        {
-            audioSource.PlayOneShot(sonidoSeleccion);
+            yield return new WaitForSeconds(velocidadParpadeo);
         }
     }
 
     private void SeleccionarOpcion()
     {
         puedeNavegar = false;
-        ReproducirSonidoSeleccion();
 
-        // Detener animación
-        if (coroutinePulse != null)
-        {
-            StopCoroutine(coroutinePulse);
-            coroutinePulse = null;
-        }
+        if (coroutineParpadeo != null)
+            StopCoroutine(coroutineParpadeo);
 
-        // Efecto visual de confirmación (escala máxima momentánea)
-        if (botones[indiceActual] != null)
-        {
-            botones[indiceActual].transform.localScale = escalaOriginal * escalaMaxima;
-        }
+        if (arrowIndicator != null)
+            arrowIndicator.enabled = true;
 
         switch (indiceActual)
         {
-            case 0: StartCoroutine(CargarEscena(sceneJugar)); break;
-            case 1: StartCoroutine(CargarEscena(sceneNiveles)); break;
-            case 2: StartCoroutine(CargarEscena(sceneCreditos)); break;
-            case 3: SalirDelJuego(); break;
+            case 0:
+                StartCoroutine(CargarEscena(sceneJugar));
+                break;
+
+            case 1:
+                StartCoroutine(CargarEscena(sceneNiveles));
+                break;
+
+            case 2:
+                StartCoroutine(CargarEscena(sceneCreditos));
+                break;
+
+            case 3:
+                SalirDelJuego();
+                break;
         }
     }
+
+ 
 
     private IEnumerator CargarEscena(string nombreEscena)
     {
         Debug.Log(">>> Cargando escena: " + nombreEscena + " | indice: " + indiceActual);
-        yield return new WaitForSeconds(0.3f); // Esperar para que se vea el efecto
+
+        yield return new WaitForSeconds(0.1f);
+
         SceneManager.LoadScene(nombreEscena);
+    }
+
+    public void AbrirTienda()
+    {
+        SceneManager.LoadScene("Tienda");
     }
 
     private void SalirDelJuego()
