@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: edb8dbd4705284ebe9fdec3342e44a71
+guid: b1e84943287a24e1ca61400deeeb26e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9179186819665011452
-    second: casas2_0
+      213: 6128225895409450369
+    second: enemigo pega_0
   - first:
-      213: 4910646974239459606
-    second: casas2_1
+      213: -8326553918289729782
+    second: enemigo pega_1
   - first:
-      213: -4568199567411033477
-    second: casas2_2
+      213: 3970160312996654654
+    second: enemigo pega_2
   - first:
-      213: 802091627300580063
-    second: casas2_3
+      213: -9130534659960932289
+    second: enemigo pega_3
   - first:
-      213: 5685687500333091462
-    second: casas2_4
+      213: -7656294401179157027
+    second: enemigo pega_4
   - first:
-      213: -3685579303367847512
-    second: casas2_5
+      213: -7603827853472405674
+    second: enemigo pega_5
   - first:
-      213: -2561241187469990238
-    second: casas2_6
+      213: 4115464449935571296
+    second: enemigo pega_6
   - first:
-      213: -3775890841219869189
-    second: casas2_7
+      213: -8413646237798022611
+    second: enemigo pega_7
   - first:
-      213: 5355961064530917593
-    second: casas2_8
+      213: -7097222622211214354
+    second: enemigo pega_8
   - first:
-      213: 3123190599278069183
-    second: casas2_9
+      213: 70956535632012507
+    second: enemigo pega_9
   - first:
-      213: 5329982195086959662
-    second: casas2_10
+      213: 8145588627827878859
+    second: enemigo pega_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -130,243 +130,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: casas2_0
+      name: enemigo pega_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 529
-        width: 560
-        height: 491
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf2a41177c5036f70800000000000000
-      internalID: 9179186819665011452
+      spriteID: 18dfa3fabf4db0550800000000000000
+      internalID: 6128225895409450369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_1
+      name: enemigo pega_1
       rect:
         serializedVersion: 2
-        x: 558
-        y: 529
-        width: 425
-        height: 495
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 213
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 619c3e4c76f162440800000000000000
-      internalID: 4910646974239459606
+      spriteID: a072439c353227c80800000000000000
+      internalID: -8326553918289729782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_2
+      name: enemigo pega_2
       rect:
         serializedVersion: 2
-        x: 965
-        y: 267
-        width: 564
-        height: 757
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 426
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7a4f5162be7a90c0800000000000000
-      internalID: -4568199567411033477
+      spriteID: e3ee48515c7d81730800000000000000
+      internalID: 3970160312996654654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_3
+      name: enemigo pega_3
       rect:
         serializedVersion: 2
-        x: 23
-        y: 225
-        width: 530
-        height: 299
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 639
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdae09ad51a912b00800000000000000
-      internalID: 802091627300580063
+      spriteID: f38f2a73a13d94180800000000000000
+      internalID: -9130534659960932289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_4
+      name: enemigo pega_4
       rect:
         serializedVersion: 2
-        x: 550
-        y: 235
-        width: 403
-        height: 281
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 852
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68a8b3158ae97ee40800000000000000
-      internalID: 5685687500333091462
+      spriteID: ddd77e19ec06fb590800000000000000
+      internalID: -7656294401179157027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_5
+      name: enemigo pega_5
       rect:
         serializedVersion: 2
-        x: 947
-        y: 271
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1065
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a15a3f86213adcc0800000000000000
-      internalID: -3685579303367847512
+      spriteID: 6576e84aad6c97690800000000000000
+      internalID: -7603827853472405674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_6
+      name: enemigo pega_6
       rect:
         serializedVersion: 2
-        x: 1140
-        y: 231
-        width: 386
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1278
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a660c4c5b4a47cd0800000000000000
-      internalID: -2561241187469990238
+      spriteID: 0697820dc111d1930800000000000000
+      internalID: 4115464449935571296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_7
+      name: enemigo pega_7
       rect:
         serializedVersion: 2
-        x: 31
-        y: 3
-        width: 390
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1491
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf550721947599bc0800000000000000
-      internalID: -3775890841219869189
+      spriteID: d224f3af259bc3b80800000000000000
+      internalID: -8413646237798022611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_8
+      name: enemigo pega_8
       rect:
         serializedVersion: 2
-        x: 427
-        y: 1
-        width: 382
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1704
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d8303a0632345a40800000000000000
-      internalID: 5355961064530917593
+      spriteID: ee3fb37b0a9918d90800000000000000
+      internalID: -7097222622211214354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casas2_9
+      name: enemigo pega_9
       rect:
         serializedVersion: 2
-        x: 823
-        y: 1
-        width: 420
-        height: 248
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1917
+        y: 0
+        width: 213
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.415}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb50fcb7d4dc75b20800000000000000
-      internalID: 3123190599278069183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: casas2_10
-      rect:
-        serializedVersion: 2
-        x: 1253
-        y: 7
-        width: 259
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e24a0552196e7f940800000000000000
-      internalID: 5329982195086959662
+      spriteID: bd4a6dcd7961cf000800000000000000
+      internalID: 70956535632012507
       vertices: []
       indices: 
       edges: []
@@ -375,7 +353,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fdd381e8f155440ab886f67f439f10e3
     internalID: 0
     vertices: []
     indices: 
@@ -383,19 +361,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":213.0,"y":353.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      casas2_0: 9179186819665011452
-      casas2_1: 4910646974239459606
-      casas2_10: 5329982195086959662
-      casas2_2: -4568199567411033477
-      casas2_3: 802091627300580063
-      casas2_4: 5685687500333091462
-      casas2_5: -3685579303367847512
-      casas2_6: -2561241187469990238
-      casas2_7: -3775890841219869189
-      casas2_8: 5355961064530917593
-      casas2_9: 3123190599278069183
+      enemigo pega_0: 6128225895409450369
+      enemigo pega_1: -8326553918289729782
+      enemigo pega_2: 3970160312996654654
+      enemigo pega_3: -9130534659960932289
+      enemigo pega_4: -7656294401179157027
+      enemigo pega_5: -7603827853472405674
+      enemigo pega_6: 4115464449935571296
+      enemigo pega_7: -8413646237798022611
+      enemigo pega_8: -7097222622211214354
+      enemigo pega_9: 70956535632012507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
