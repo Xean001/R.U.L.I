@@ -42,6 +42,10 @@ public class EscudoEnemigo : MonoBehaviour
     private bool    muerto;
     public int nivelActual = 1;
 
+    [Header("Drop de arma al morir")]
+    [Tooltip("Objeto (inactivo) que cae al morir. Al recogerlo sale la victoria. Si esta vacio, muestra la victoria directo.")]
+    public GameObject armaDrop;
+
 
 
     void Awake()
@@ -236,11 +240,24 @@ public class EscudoEnemigo : MonoBehaviour
         anim.SetFloat("velocidadX", 0f);
         if (vidaUI != null) vidaUI.Ocultar();
 
-        var victoryController = FindFirstObjectByType<VictoryController>();
-        if (victoryController != null)
+        if (armaDrop != null)
         {
-            victoryController.nivelActual = nivelActual; 
-            victoryController.MostrarVictoria();
+            // Soltar el arma: cae desde la posicion del enemigo. La victoria
+            // sale cuando Ruli la recoge (ArmaRecolectable).
+            armaDrop.transform.position = transform.position + new Vector3(0f, 0.5f, 0f);
+            armaDrop.SetActive(true);
+            var rec = armaDrop.GetComponent<ArmaRecolectable>();
+            if (rec != null) rec.nivelActual = nivelActual;
+        }
+        else
+        {
+            // Sin arma asignada: victoria directa (comportamiento anterior).
+            var victoryController = FindFirstObjectByType<VictoryController>();
+            if (victoryController != null)
+            {
+                victoryController.nivelActual = nivelActual;
+                victoryController.MostrarVictoria();
+            }
         }
 
         StopAllCoroutines();
