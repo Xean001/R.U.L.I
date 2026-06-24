@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__coplay-mcp__get_game_object_info",
+      "Bash(python3 -)",
+      "mcp__coplay-mcp__capture_scene_object"
+    ]
+  }
+}
