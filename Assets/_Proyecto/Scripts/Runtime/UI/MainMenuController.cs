@@ -6,15 +6,16 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    [Header("Botones del Menú")]
+    [Header("Botones del Menï¿½")]
     public Button[] botones;
 
     [Header("Escenas")]
     public string sceneJugar = "Nivel1";
     public string sceneNiveles = "Niveles";
     public string sceneCreditos = "Creditos";
+    public string sceneTienda = "Tienda";
 
-    [Header("Animación de Botón")]
+    [Header("Animaciï¿½n de Botï¿½n")]
     public float escalaMinima = 1f;
     public float escalaMaxima = 1.15f;
     public float velocidadPulse = 3f;
@@ -42,7 +43,7 @@ public class MainMenuController : MonoBehaviour
             }
         }
 
-        // Iniciar en el primer botón
+        // Iniciar en el primer botï¿½n
         indiceActual = 0;
         ActualizarSeleccion();
     }
@@ -53,14 +54,14 @@ public class MainMenuController : MonoBehaviour
         if (botones == null || botones.Length == 0) return;
 
 
-        // Navegación hacia arriba
+        // Navegaciï¿½n hacia arriba
         if (RuliInput.MenuArribaPresionado())
         {
             indiceActual = (indiceActual - 1 + botones.Length) % botones.Length;
             ReproducirSonidoNavegacion();
             ActualizarSeleccion();
         }
-        // Navegación hacia abajo
+        // Navegaciï¿½n hacia abajo
         else if (RuliInput.MenuAbajoPresionado())
         {
             indiceActual = (indiceActual + 1) % botones.Length;
@@ -68,7 +69,7 @@ public class MainMenuController : MonoBehaviour
             ActualizarSeleccion();
         }
 
-        // Selección
+        // Selecciï¿½n
         if (RuliInput.SubmitPresionado())
         {
             SeleccionarOpcion();
@@ -101,7 +102,7 @@ public class MainMenuController : MonoBehaviour
 
     private void ActualizarSeleccion()
     {
-        // Detener animación del botón anterior
+        // Detener animaciï¿½n del botï¿½n anterior
         if (coroutinePulse != null)
         {
             StopCoroutine(coroutinePulse);
@@ -117,7 +118,7 @@ public class MainMenuController : MonoBehaviour
             }
         }
 
-        // Iniciar animación en el botón seleccionado
+        // Iniciar animaciï¿½n en el botï¿½n seleccionado
         if (botones[indiceActual] != null)
         {
             escalaOriginal = botones[indiceActual].transform.localScale;
@@ -133,10 +134,10 @@ public class MainMenuController : MonoBehaviour
         {
             tiempo += Time.deltaTime * velocidadPulse;
 
-            // Calcular escala usando función sinusoidal
+            // Calcular escala usando funciï¿½n sinusoidal
             float escala = escalaMinima + (escalaMaxima - escalaMinima) * (Mathf.Sin(tiempo) * 0.5f + 0.5f);
 
-            // Aplicar escala manteniendo la proporción original
+            // Aplicar escala manteniendo la proporciï¿½n original
             Vector3 nuevaEscala = escalaOriginal * escala;
             boton.transform.localScale = nuevaEscala;
 
@@ -165,14 +166,14 @@ public class MainMenuController : MonoBehaviour
         puedeNavegar = false;
         ReproducirSonidoSeleccion();
 
-        // Detener animación
+        // Detener animaciï¿½n
         if (coroutinePulse != null)
         {
             StopCoroutine(coroutinePulse);
             coroutinePulse = null;
         }
 
-        // Efecto visual de confirmación (escala máxima momentánea)
+        // Efecto visual de confirmaciï¿½n (escala mï¿½xima momentï¿½nea)
         if (botones[indiceActual] != null)
         {
             botones[indiceActual].transform.localScale = escalaOriginal * escalaMaxima;
@@ -184,7 +185,14 @@ public class MainMenuController : MonoBehaviour
             case 1: StartCoroutine(CargarEscena(sceneNiveles)); break;
             case 2: StartCoroutine(CargarEscena(sceneCreditos)); break;
             case 3: SalirDelJuego(); break;
+            case 4: StartCoroutine(CargarEscena(sceneTienda)); break;
         }
+    }
+
+    // Acceso directo a la tienda (para boton con onClick propio).
+    public void AbrirTienda()
+    {
+        StartCoroutine(CargarEscena(sceneTienda));
     }
 
     private IEnumerator CargarEscena(string nombreEscena)
