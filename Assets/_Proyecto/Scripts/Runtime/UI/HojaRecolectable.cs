@@ -6,7 +6,8 @@ public class HojaRecolectable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            MonedasManager.Instance.AgregarMoneda(1);
+            // Cuenta por-partida; se banca al ganar el nivel (anti-farmeo).
+            ContadorMonedas.Instance?.Agregar(1);
 
             Destroy(gameObject);
         }

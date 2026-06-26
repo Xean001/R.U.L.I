@@ -2,19 +2,22 @@ using UnityEngine;
 
 public class TiendaManager : MonoBehaviour
 {
+    [Header("Precios (hojas)")]
+    public int precioSoplador = 5;
+    public int precioTornado  = 3;
+
     public void ComprarSoplador()
     {
-        int monedas = PlayerPrefs.GetInt("Monedas", 0);
-
-        if (monedas >= 5)
+        if (PlayerPrefs.GetInt("Arma1Comprada", 0) == 1)
         {
-            monedas -= 5;
+            Debug.Log("Soplador ya comprado");
+            return;
+        }
 
-            PlayerPrefs.SetInt("Monedas", monedas);
+        if (BancoMonedas.Gastar(precioSoplador))
+        {
             PlayerPrefs.SetInt("Arma1Comprada", 1);
-
             PlayerPrefs.Save();
-
             Debug.Log("Soplador comprado");
         }
         else
@@ -25,17 +28,16 @@ public class TiendaManager : MonoBehaviour
 
     public void ComprarTornado()
     {
-        int monedas = PlayerPrefs.GetInt("Monedas", 0);
-
-        if (monedas >= 3)
+        if (PlayerPrefs.GetInt("Arma2Comprada", 0) == 1)
         {
-            monedas -= 3;
+            Debug.Log("Tornado ya comprado");
+            return;
+        }
 
-            PlayerPrefs.SetInt("Monedas", monedas);
+        if (BancoMonedas.Gastar(precioTornado))
+        {
             PlayerPrefs.SetInt("Arma2Comprada", 1);
-
             PlayerPrefs.Save();
-
             Debug.Log("Tornado comprado");
         }
         else

@@ -8327,9 +8327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSoundcontroler
   audioSourceSfx: {fileID: 927842684}
   audioSourceLoop: {fileID: 0}
-  audioattack: {fileID: 8300000, guid: e643d21b7c5c74b649eb977f355a9175, type: 3}
+  audioattack: {fileID: 8300000, guid: 6fd05177443b74f9caf13cd90411be21, type: 3}
   audiodead: {fileID: 8300000, guid: 3dbcb0701e54b4dc8ae08f143ad2e99e, type: 3}
-  audiojump: {fileID: 8300000, guid: 1c84283127c6d45d6afb19efc666a7b3, type: 3}
+  audiojump: {fileID: 8300000, guid: 66da292ce3cdc425fa5217a764b87720, type: 3}
   audiorun: {fileID: 8300000, guid: 8284fd1b844454b43842b178a85921c8, type: 3}
   audiospawn: {fileID: 8300000, guid: 13b771ad225f24af2ac6d6861ffb7afd, type: 3}
 --- !u!82 &927842684

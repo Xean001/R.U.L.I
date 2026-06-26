@@ -51,6 +51,14 @@ public static class RuliInput
             CualquierMandoPresiono(m => m.rightTrigger);
     }
 
+    public static bool RuedaAbierta { get; set; }
+
+    public static bool RuedaHabilidadesPresionada()
+    {
+        Keyboard teclado = Keyboard.current;
+        return teclado != null && teclado.eKey.wasPressedThisFrame;
+    }
+
     public static bool PausaPresionada()
     {
         Keyboard teclado = Keyboard.current;

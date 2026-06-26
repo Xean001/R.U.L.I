@@ -28,6 +28,10 @@ public class VictoriaNivel : MonoBehaviour
         PlayerPrefs.SetInt("Nivel" + (nivelActual + 1) + "Desbloqueado", 1);
         PlayerPrefs.Save();
 
+        // Banca las monedas recogidas esta partida (anti-farmeo por nivel)
+        int recogidas = ContadorMonedas.Instance != null ? ContadorMonedas.Instance.Monedas : 0;
+        BancoMonedas.RegistrarNivel(nivelActual, recogidas);
+
         if (panelVictoria != null) panelVictoria.SetActive(true);
         StartCoroutine(IrAlMenu());
     }

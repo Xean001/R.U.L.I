@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: ab4c7e833d90942948027c4c7914bba0
+guid: ccd856df5e1ba42d6835f15eb5dab25b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5544336463580313496
-    second: arma_0
+      213: 8436893336632281385
+    second: rueda-habilidades_0
+  - first:
+      213: -7558864695804778972
+    second: rueda-habilidades_1
+  - first:
+      213: 6582970006560862247
+    second: rueda-habilidades_2
+  - first:
+      213: 5585338086967884587
+    second: rueda-habilidades_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arma_0
+      name: rueda-habilidades_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1
-        width: 1513
-        height: 1023
+        x: 56
+        y: 57
+        width: 538
+        height: 801
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 868cc0d8c5f8e03b0800000000000000
-      internalID: -5544336463580313496
+      spriteID: 929c3d10acdd51570800000000000000
+      internalID: 8436893336632281385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rueda-habilidades_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 747
+        width: 924
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426a0559b94891790800000000000000
+      internalID: -7558864695804778972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rueda-habilidades_2
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 362
+        width: 476
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7207c18c7586b5b50800000000000000
+      internalID: 6582970006560862247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rueda-habilidades_3
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 57
+        width: 538
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b3e20d56b138d40800000000000000
+      internalID: 5585338086967884587
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      arma_0: -5544336463580313496
+      rueda-habilidades_0: 8436893336632281385
+      rueda-habilidades_1: -7558864695804778972
+      rueda-habilidades_2: 6582970006560862247
+      rueda-habilidades_3: 5585338086967884587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

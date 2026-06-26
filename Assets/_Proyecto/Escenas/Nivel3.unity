@@ -2468,6 +2468,7 @@ GameObject:
   - component: {fileID: 772621852}
   - component: {fileID: 772621851}
   - component: {fileID: 772621850}
+  - component: {fileID: 772621870}
   m_Layer: 3
   m_Name: Ruli
   m_TagString: Untagged
@@ -2504,9 +2505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSoundcontroler
   audioSourceSfx: {fileID: 772621852}
   audioSourceLoop: {fileID: 0}
-  audioattack: {fileID: 8300000, guid: e643d21b7c5c74b649eb977f355a9175, type: 3}
+  audioattack: {fileID: 8300000, guid: 6fd05177443b74f9caf13cd90411be21, type: 3}
   audiodead: {fileID: 8300000, guid: 3dbcb0701e54b4dc8ae08f143ad2e99e, type: 3}
-  audiojump: {fileID: 8300000, guid: 1c84283127c6d45d6afb19efc666a7b3, type: 3}
+  audiojump: {fileID: 8300000, guid: 66da292ce3cdc425fa5217a764b87720, type: 3}
   audiorun: {fileID: 8300000, guid: 8284fd1b844454b43842b178a85921c8, type: 3}
   audiospawn: {fileID: 8300000, guid: 13b771ad225f24af2ac6d6861ffb7afd, type: 3}
 --- !u!82 &772621852
@@ -8224,3 +8225,22 @@ SceneRoots:
   - {fileID: 224013912}
   - {fileID: 491702993}
   - {fileID: 1046699338}
+--- !u!114 &772621870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772621849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5643b89fc5c48114c98f2d50251796f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquiparArma
+  armaTornado: {fileID: 0}
+  armaSoplador: {fileID: 0}
+  panelRueda: {fileID: 0}
+  colorNormal: {r: 1, g: 1, b: 1, a: 1}
+  colorBloqueado: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+  colorSeleccion: {r: 0.2, g: 1, b: 0.6, a: 1}
+  indiceArmaActiva: 0

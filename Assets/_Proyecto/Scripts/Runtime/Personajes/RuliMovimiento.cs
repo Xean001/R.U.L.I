@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -16,23 +17,31 @@ public class RuliMovimiento : MonoBehaviour
     public Vector2 offsetAtaque = new Vector2(0.4f, 0f);
     public LayerMask capaCilindros = ~0;
 
+    [Header("Ataque Tornado")]
+    public float duracionTornado = 3f;          // cuanto dura el giro
+    public float intervaloGolpeTornado = 0.3f;  // cada cuanto golpea
+    public float radioTornado = 1f;             // alcance del tornado (mas grande)
+
     [Header("Audio")]
     [SerializeField] private PlayerSoundcontroler soundControl;
 
     private Rigidbody2D rb;
     private Animator anim;
     private RuliSalud salud;
+    private EquiparArma equipar;
     private bool estaEnSuelo;
     private float movimientoHorizontal;
     private bool miraDerecha = true;
     private bool saltoPendiente;
     private bool estaMuerto;
+    private bool tornadoActivo;
 
     void Awake()
     {
-        rb     = GetComponent<Rigidbody2D>();
-        anim   = GetComponent<Animator>();
-        salud  = GetComponent<RuliSalud>();
+        rb      = GetComponent<Rigidbody2D>();
+        anim    = GetComponent<Animator>();
+        salud   = GetComponent<RuliSalud>();
+        equipar = GetComponent<EquiparArma>();
         if (soundControl == null)
             soundControl = GetComponent<PlayerSoundcontroler>();
     }
@@ -49,10 +58,10 @@ public class RuliMovimiento : MonoBehaviour
         // Input unificado: teclado + mando + controles tactiles
         movimientoHorizontal = RuliInput.MovimientoHorizontal();
 
-        if (RuliInput.SaltoPresionado() && estaEnSuelo)
+        if (RuliInput.SaltoPresionado() && estaEnSuelo && !RuliInput.RuedaAbierta && !tornadoActivo)
             saltoPendiente = true;
 
-        if (RuliInput.AtaquePresionado())
+        if (RuliInput.AtaquePresionado() && !RuliInput.RuedaAbierta)
             Atacar();
 
         VoltearPersonaje();
@@ -144,20 +153,59 @@ public class RuliMovimiento : MonoBehaviour
     {
         if (anim == null) return;
         anim.SetFloat("velocidadX", Mathf.Abs(movimientoHorizontal));
-        anim.SetBool("en suelo", estaEnSuelo);
+        // Durante el tornado forzamos "en suelo" para que el roce con enemigos
+        // (OnCollisionExit2D) no dispare la animacion de salto y corte el giro.
+        anim.SetBool("en suelo", estaEnSuelo || tornadoActivo);
     }
 
     void Atacar()
     {
+        bool usaTornado = equipar != null && equipar.indiceArmaActiva == 1;
+
+        if (usaTornado)
+        {
+            if (!tornadoActivo) StartCoroutine(AtaqueTornado());
+            return;
+        }
+
+        // Ataque normal
         if (soundControl != null) soundControl.PlayAttack();
         if (anim != null)
         {
             anim.ResetTrigger("atacar");
             anim.SetTrigger("atacar");
         }
+        AplicarGolpe(radioAtaque);
+    }
 
+    IEnumerator AtaqueTornado()
+    {
+        tornadoActivo = true;
+        if (soundControl != null) soundControl.PlayAttack();
+        if (anim != null)
+        {
+            anim.SetBool("tornadoActivo", true);
+            anim.ResetTrigger("atacarTornado");
+            anim.SetTrigger("atacarTornado");
+        }
+
+        // Golpea repetidamente durante toda la duracion del giro
+        float t = 0f;
+        while (t < duracionTornado && !estaMuerto)
+        {
+            AplicarGolpe(radioTornado);
+            yield return new WaitForSeconds(intervaloGolpeTornado);
+            t += intervaloGolpeTornado;
+        }
+
+        if (anim != null) anim.SetBool("tornadoActivo", false);
+        tornadoActivo = false;
+    }
+
+    void AplicarGolpe(float radio)
+    {
         Vector2 centro = (Vector2)transform.position + new Vector2(offsetAtaque.x * (miraDerecha ? 1f : -1f), offsetAtaque.y);
-        var golpes = Physics2D.OverlapCircleAll(centro, radioAtaque, capaCilindros);
+        var golpes = Physics2D.OverlapCircleAll(centro, radio, capaCilindros);
         foreach (var c in golpes)
         {
             var cilindro = c.GetComponent<Cilindro>();

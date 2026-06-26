@@ -12,6 +12,6 @@ public class MostrarMonedas : MonoBehaviour
 
     private void Update()
     {
-        texto.text = PlayerPrefs.GetInt("Monedas", 0).ToString();
+        texto.text = BancoMonedas.Monedas.ToString();
     }
 }

@@ -13,7 +13,7 @@ public class VictoryController : MonoBehaviour
     public Button btnSiguienteNivel;
     public Button btnMenu;
 
-    [Header("Animación")]
+    [Header("Animaciï¿½n")]
     public float duracionAnimacion = 0.4f;
     public Vector2 posicionOculto = new Vector2(0, -508.88f); // Escondido arriba
     public Vector2 posicionVisible = Vector2.zero; // Top 0, Bottom 0
@@ -25,7 +25,7 @@ public class VictoryController : MonoBehaviour
     private AudioSource audioSource;
     private AudioSource audioCameraOriginal;
 
-    [Header("Animación de Botones")]
+    [Header("Animaciï¿½n de Botones")]
     public float escalaMinima = 1f;
     public float escalaMaxima = 1.15f;
     public float velocidadPulse = 3f;
@@ -89,14 +89,18 @@ public class VictoryController : MonoBehaviour
         // CONGELAR EL JUEGO
         Time.timeScale = 0f;
 
-        // Mutear música del juego
+        // Mutear mï¿½sica del juego
         MutearMusicaJuego(true);
 
-        // Sonido de aparición
+        // Sonido de apariciï¿½n
         ReproducirSonido(sonidoAparicion);
 
         // Marcar nivel como completado
         MarcarNivelCompletado();
+
+        // Banca las monedas recogidas esta partida (anti-farmeo por nivel)
+        int recogidas = ContadorMonedas.Instance != null ? ContadorMonedas.Instance.Monedas : 0;
+        BancoMonedas.RegistrarNivel(nivelActual, recogidas);
 
         StartCoroutine(AnimacionEntrada());
     }
@@ -126,7 +130,7 @@ public class VictoryController : MonoBehaviour
             yield return null;
         }
 
-        // Fase 2: Bajar (posición oculto -> posición visible)
+        // Fase 2: Bajar (posiciï¿½n oculto -> posiciï¿½n visible)
         tiempo = 0f;
         while (tiempo < duracionAnimacion * 0.5f)
         {
@@ -174,7 +178,7 @@ public class VictoryController : MonoBehaviour
 
     void ActualizarSeleccionBotones()
     {
-        // Detener animación anterior
+        // Detener animaciï¿½n anterior
         if (coroutinePulse != null)
         {
             StopCoroutine(coroutinePulse);
@@ -188,7 +192,7 @@ public class VictoryController : MonoBehaviour
                 botones[i].transform.localScale = Vector3.one;
         }
 
-        // Iniciar animación en el botón seleccionado
+        // Iniciar animaciï¿½n en el botï¿½n seleccionado
         if (botones[indiceActual] != null && puedeNavegar)
         {
             coroutinePulse = StartCoroutine(AnimacionPulseBoton(botones[indiceActual]));
