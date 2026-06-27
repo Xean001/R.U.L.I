@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Proyecto/Escenas/Pausa.unity
     guid: e566e17fffd53a9478ea740b7e6f30c6
+  - enabled: 1
+    path: Assets/_Proyecto/Escenas/Nivel5.unity
+    guid: 55ce5e5e5ce5e5e5e5ce5e5e5e5e5e55
   m_configObjects: {}
