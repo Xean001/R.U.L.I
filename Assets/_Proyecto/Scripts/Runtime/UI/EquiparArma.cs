@@ -16,7 +16,7 @@ public class EquiparArma : MonoBehaviour
     public Color colorBloqueado  = new Color(0.4f, 0.4f, 0.4f, 1f);
     public Color colorSeleccion  = new Color(0.2f, 1f, 0.6f, 1f);
 
-    // 0 = puños (sin arma), 1 = tornado, 2 = soplador
+    // 0 = puños (sin arma), 1 = tornado (tienda), 2 = arma (se gana en Nivel1)
     public int indiceArmaActiva = 0;
 
     private Image[] slots;
@@ -126,8 +126,9 @@ public class EquiparArma : MonoBehaviour
     private bool Disponible(int indice)
     {
         if (indice == 0) return true;
+        // Tornado: se compra en la tienda. Arma: se gana al derrotar al jefe de Nivel1.
         if (indice == 1) return PlayerPrefs.GetInt("Arma2Comprada", 0) == 1;
-        return PlayerPrefs.GetInt("Arma1Comprada", 0) == 1;
+        return PlayerPrefs.GetInt("ArmaConseguida", 0) == 1;
     }
 
     public void ActivarArmaIndice(int indice)

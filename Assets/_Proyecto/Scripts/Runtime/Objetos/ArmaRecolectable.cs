@@ -12,6 +12,9 @@ public class ArmaRecolectable : MonoBehaviour
     [Tooltip("Nivel que se marca como completado al recogerla.")]
     public int nivelActual = 1;
 
+    [Tooltip("Flag de PlayerPrefs que se activa al recogerla. Habilita el arma en la rueda de habilidades.")]
+    public string flagArma = "ArmaConseguida";
+
     [Header("Flotacion (cuando ya esta en el suelo)")]
     public float amplitud = 0.12f;
     public float velocidad = 3f;
@@ -30,6 +33,13 @@ public class ArmaRecolectable : MonoBehaviour
             return;
 
         recogida = true;
+
+        // Marca el arma como conseguida -> se habilita en la rueda de habilidades.
+        if (!string.IsNullOrEmpty(flagArma))
+        {
+            PlayerPrefs.SetInt(flagArma, 1);
+            PlayerPrefs.Save();
+        }
 
         var vc = Object.FindFirstObjectByType<VictoryController>();
         if (vc != null)

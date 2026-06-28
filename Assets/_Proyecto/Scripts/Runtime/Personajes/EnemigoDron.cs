@@ -20,6 +20,12 @@ public class EnemigoDron : MonoBehaviour
     public Transform puntoDisparo;         // boca de disparo (opcional; por defecto el propio dron)
     public bool miraDerechaPorDefecto = true;
 
+    [Header("Vida")]
+    public int golpesParaMorir = 3;        // golpes de Ruli (melee/tornado/disparo) para caer
+
+    private int  golpes;
+    private bool muerto;
+
     private Animator       anim;
     private SpriteRenderer sr;
     private Transform      objetivo;       // Ruli
@@ -38,6 +44,7 @@ public class EnemigoDron : MonoBehaviour
 
     void Update()
     {
+        if (muerto) return;
         if (cargando) return;   // mientras carga/dispara queda quieto
 
         if (objetivo == null)
@@ -107,6 +114,57 @@ public class EnemigoDron : MonoBehaviour
             var rb = go.GetComponent<Rigidbody2D>();
             if (rb != null) rb.linearVelocity = dir * velocidadDisparo;
         }
+    }
+
+    // Recibe un golpe de Ruli (melee, tornado o proyectil). Muere a los N golpes.
+    public void Golpe()
+    {
+        if (muerto) return;
+
+        golpes++;
+        StopCoroutine(nameof(Sacudir));
+        StartCoroutine(Sacudir());
+
+        if (golpes >= golpesParaMorir)
+            Morir();
+    }
+
+    private void Morir()
+    {
+        muerto   = true;
+        cargando = false;
+        if (anim != null) anim.SetBool("cargando", false);
+        StopAllCoroutines();
+        StartCoroutine(Desaparecer());
+    }
+
+    private IEnumerator Sacudir()
+    {
+        Vector3 pos = transform.localPosition;
+        float t = 0f;
+        while (t < 0.18f)
+        {
+            transform.localPosition = pos + new Vector3(Mathf.Sin(t * 80f) * 0.06f, 0f, 0f);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        transform.localPosition = pos;
+    }
+
+    // Sin animacion de muerte: cae un poco y se desvanece.
+    private IEnumerator Desaparecer()
+    {
+        float t = 0f;
+        Color c = sr.color;
+        while (t < 0.5f)
+        {
+            t += Time.deltaTime;
+            float p = t / 0.5f;
+            sr.color = new Color(c.r, c.g, c.b, 1f - p);
+            transform.position += new Vector3(0f, -2f * Time.deltaTime, 0f);
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 
     void OnDrawGizmosSelected()

@@ -22,6 +22,11 @@ public class RuliMovimiento : MonoBehaviour
     public float intervaloGolpeTornado = 0.3f;  // cada cuanto golpea
     public float radioTornado = 1f;             // alcance del tornado (mas grande)
 
+    [Header("Ataque Disparo (arma/soplador)")]
+    public GameObject prefabDisparo;            // opcional; por defecto carga Resources/ProyectilRuli
+    public float velocidadDisparo = 12f;
+    public Vector2 offsetDisparo = new Vector2(0.6f, 0f);
+
     [Header("Audio")]
     [SerializeField] private PlayerSoundcontroler soundControl;
 
@@ -160,15 +165,29 @@ public class RuliMovimiento : MonoBehaviour
 
     void Atacar()
     {
-        bool usaTornado = equipar != null && equipar.indiceArmaActiva == 1;
+        int arma = equipar != null ? equipar.indiceArmaActiva : 0;
 
-        if (usaTornado)
+        // Tornado (giro sostenido)
+        if (arma == 1)
         {
             if (!tornadoActivo) StartCoroutine(AtaqueTornado());
             return;
         }
 
-        // Ataque normal
+        // Arma/soplador -> animacion de disparo + proyectil
+        if (arma == 2)
+        {
+            if (soundControl != null) soundControl.PlayAttack();
+            if (anim != null)
+            {
+                anim.ResetTrigger("atacarDisparo");
+                anim.SetTrigger("atacarDisparo");
+            }
+            DispararProyectil();
+            return;
+        }
+
+        // Ataque normal (puños)
         if (soundControl != null) soundControl.PlayAttack();
         if (anim != null)
         {
@@ -176,6 +195,29 @@ public class RuliMovimiento : MonoBehaviour
             anim.SetTrigger("atacar");
         }
         AplicarGolpe(radioAtaque);
+    }
+
+    void DispararProyectil()
+    {
+        GameObject prefab = prefabDisparo != null ? prefabDisparo : Resources.Load<GameObject>("ProyectilRuli");
+        if (prefab == null) return;
+
+        float dir = miraDerecha ? 1f : -1f;
+        Vector3 origen = transform.position + new Vector3(offsetDisparo.x * dir, offsetDisparo.y, 0f);
+        GameObject bala = Instantiate(prefab, origen, Quaternion.identity);
+
+        // Orientar la bala hacia donde mira Ruli
+        Vector3 esc = bala.transform.localScale;
+        esc.x = Mathf.Abs(esc.x) * dir;
+        bala.transform.localScale = esc;
+
+        var p = bala.GetComponent<ProyectilRuli>();
+        if (p != null) p.Lanzar(new Vector2(dir * velocidadDisparo, 0f));
+        else
+        {
+            var rbBala = bala.GetComponent<Rigidbody2D>();
+            if (rbBala != null) rbBala.linearVelocity = new Vector2(dir * velocidadDisparo, 0f);
+        }
     }
 
     IEnumerator AtaqueTornado()
@@ -228,6 +270,9 @@ public class RuliMovimiento : MonoBehaviour
 
             var librero = c.GetComponent<EnemigoLibreroJefe>();
             if (librero != null) librero.Golpe();
+
+            var dron = c.GetComponent<EnemigoDron>();
+            if (dron != null) dron.Golpe();
         }
     }
 
