@@ -29,14 +29,32 @@ public static class RuliInput
 
     public static bool SaltoPresionado()
     {
+        // El salto es EXCLUSIVAMENTE con espacio (W queda libre para escalar).
         Keyboard teclado = Keyboard.current;
-        bool tecladoPresionado = teclado != null &&
-            (teclado.wKey.wasPressedThisFrame ||
-             teclado.upArrowKey.wasPressedThisFrame ||
-             teclado.spaceKey.wasPressedThisFrame);
+        bool tecladoPresionado = teclado != null && teclado.spaceKey.wasPressedThisFrame;
 
         bool mobilePresionado = ConsumirMobileSalto();
         return tecladoPresionado || mobilePresionado || CualquierMandoPresiono(m => m.buttonSouth);
+    }
+
+    // Eje vertical para escalar lianas: W/Arriba = sube (+1), S/Abajo = baja (-1).
+    public static float EscalarVertical()
+    {
+        Keyboard teclado = Keyboard.current;
+        float v = 0f;
+        if (teclado != null)
+        {
+            if (teclado.wKey.isPressed || teclado.upArrowKey.isPressed)   v += 1f;
+            if (teclado.sKey.isPressed || teclado.downArrowKey.isPressed) v -= 1f;
+        }
+
+        foreach (Gamepad mando in Gamepad.all)
+        {
+            Vector2 d = LeerDireccionMando(mando);
+            if (Mathf.Abs(d.y) > Mathf.Abs(v)) v = d.y > 0f ? 1f : -1f;
+        }
+
+        return Mathf.Clamp(v, -1f, 1f);
     }
 
     public static bool AtaquePresionado()

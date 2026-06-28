@@ -27,6 +27,9 @@ public class RuliMovimiento : MonoBehaviour
     public float velocidadDisparo = 12f;
     public Vector2 offsetDisparo = new Vector2(0.6f, 0f);
 
+    [Header("Escalada (lianas)")]
+    public float escalarVelocidad = 3f;
+
     [Header("Audio")]
     [SerializeField] private PlayerSoundcontroler soundControl;
 
@@ -40,6 +43,10 @@ public class RuliMovimiento : MonoBehaviour
     private bool saltoPendiente;
     private bool estaMuerto;
     private bool tornadoActivo;
+    private float gravedadOriginal;
+    private int lianasEnContacto;
+    private bool escalando;
+    private float escalarInput;
 
     void Awake()
     {
@@ -47,6 +54,7 @@ public class RuliMovimiento : MonoBehaviour
         anim    = GetComponent<Animator>();
         salud   = GetComponent<RuliSalud>();
         equipar = GetComponent<EquiparArma>();
+        gravedadOriginal = rb.gravityScale;
         if (soundControl == null)
             soundControl = GetComponent<PlayerSoundcontroler>();
     }
@@ -62,8 +70,24 @@ public class RuliMovimiento : MonoBehaviour
 
         // Input unificado: teclado + mando + controles tactiles
         movimientoHorizontal = RuliInput.MovimientoHorizontal();
+        bool saltoInput = RuliInput.SaltoPresionado();
 
-        if (RuliInput.SaltoPresionado() && estaEnSuelo && !RuliInput.RuedaAbierta && !tornadoActivo)
+        // --- Escalada de lianas (W sube / S baja, Espacio salta) ---
+        bool tocandoLiana = lianasEnContacto > 0;
+        float vEscalar = RuliInput.EscalarVertical();
+
+        if (escalando)
+        {
+            escalarInput = vEscalar;
+            if (saltoInput) { DejarLiana(); saltoPendiente = true; }   // saltar a la siguiente
+            else if (!tocandoLiana) DejarLiana();
+        }
+        else if (tocandoLiana && Mathf.Abs(vEscalar) > 0.1f && !RuliInput.RuedaAbierta)
+        {
+            EntrarLiana();
+        }
+
+        if (!escalando && saltoInput && estaEnSuelo && !RuliInput.RuedaAbierta && !tornadoActivo)
             saltoPendiente = true;
 
         if (RuliInput.AtaquePresionado() && !RuliInput.RuedaAbierta)
@@ -84,6 +108,13 @@ public class RuliMovimiento : MonoBehaviour
     void FixedUpdate()
     {
         if (estaMuerto) return;
+
+        if (escalando)
+        {
+            // Sin gravedad: sube/baja por la liana y permite moverse horizontalmente
+            rb.linearVelocity = new Vector2(movimientoHorizontal * velocidad, escalarInput * escalarVelocidad);
+            return;
+        }
 
         rb.linearVelocity = new Vector2(movimientoHorizontal * velocidad, rb.linearVelocity.y);
 
@@ -128,9 +159,39 @@ public class RuliMovimiento : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (estaMuerto) return;
-        if (!other.CompareTag("Mortal")) return;
-        if (salud != null) salud.RecibirDaño();
-        else Morir();
+
+        if (other.GetComponent<Liana>() != null)
+            lianasEnContacto++;
+
+        if (other.CompareTag("Mortal"))
+        {
+            if (salud != null) salud.RecibirDaño();
+            else Morir();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.GetComponent<Liana>() != null)
+        {
+            lianasEnContacto = Mathf.Max(0, lianasEnContacto - 1);
+            if (lianasEnContacto == 0) DejarLiana();
+        }
+    }
+
+    void EntrarLiana()
+    {
+        escalando = true;
+        saltoPendiente = false;
+        rb.gravityScale = 0f;
+        rb.linearVelocity = Vector2.zero;
+    }
+
+    void DejarLiana()
+    {
+        if (!escalando) return;
+        escalando = false;
+        rb.gravityScale = gravedadOriginal;
     }
 
     bool EsColisionSuelo(Collision2D col)
@@ -160,7 +221,7 @@ public class RuliMovimiento : MonoBehaviour
         anim.SetFloat("velocidadX", Mathf.Abs(movimientoHorizontal));
         // Durante el tornado forzamos "en suelo" para que el roce con enemigos
         // (OnCollisionExit2D) no dispare la animacion de salto y corte el giro.
-        anim.SetBool("en suelo", estaEnSuelo || tornadoActivo);
+        anim.SetBool("en suelo", estaEnSuelo || tornadoActivo || escalando);
     }
 
     void Atacar()
