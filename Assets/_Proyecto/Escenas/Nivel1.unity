@@ -373,7 +373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -18.2855}
+  m_AnchoredPosition: {x: -10, y: -18.285522}
   m_SizeDelta: {x: 145.9466, y: 49.1575}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &18777661
@@ -8159,6 +8159,9 @@ MonoBehaviour:
   capaCilindros:
     serializedVersion: 2
     m_Bits: 4294967295
+  duracionTornado: 3
+  intervaloGolpeTornado: 0.3
+  radioTornado: 1
   soundControl: {fileID: 927842683}
 --- !u!70 &927842677
 CapsuleCollider2D:
@@ -13756,6 +13759,16 @@ Tilemap:
   m_GameObject: {fileID: 1578962601}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -28, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -16, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -13809,15 +13822,15 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - serializedVersion: 2
-    m_RefCount: 5
+    m_RefCount: 6
     m_Data: {fileID: 11400000, guid: db0d0f4f8dcf4664f9b5a3c5ae8d4c85, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
-    m_RefCount: 5
+    m_RefCount: 6
     m_Data: {fileID: -8252671246704864061, guid: 2ce52a889f13adc4c883c456637cd61c, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 5
+    m_RefCount: 6
     m_Data:
       e00: 1
       e01: 0
@@ -13837,13 +13850,13 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 5
+    m_RefCount: 6
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -16, y: -6, z: 0}
-  m_Size: {x: 69, y: 6, z: 1}
+  m_Origin: {x: -28, y: -6, z: 0}
+  m_Size: {x: 81, y: 6, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -14315,7 +14328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.993805, y: 498.3366}
+  m_AnchoredPosition: {x: 3.9937744, y: 498.3366}
   m_SizeDelta: {x: 37.307, y: 21.0912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626085192
