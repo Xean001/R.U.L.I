@@ -25,6 +25,13 @@ public class EnemigoArena : MonoBehaviour
     [Tooltip("Golpes de Ruli para morir.")]
     public int golpesParaMorir = 10;
 
+    [Header("Persecucion")]
+    [Tooltip("Si esta activo, camina hacia Ruli cuando lo ve y solo ataca al estar cerca (rangoAtaque).")]
+    public bool perseguir = false;
+
+    [Tooltip("Marca si el sprite (sin voltear) mira a la DERECHA. Desactivalo si el arte mira a la izquierda.")]
+    public bool spriteMiraDerecha = true;
+
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator anim;
@@ -61,7 +68,13 @@ public class EnemigoArena : MonoBehaviour
         if (timerAtaque > 0f) timerAtaque -= Time.deltaTime;
 
         if (VeARuli())
-            ModoAtaque();
+        {
+            float distX = Mathf.Abs(ruli.position.x - transform.position.x);
+            if (perseguir && distX > rangoAtaque)
+                ModoPerseguir();   // lo ve pero esta lejos -> camina hacia el
+            else
+                ModoAtaque();      // cerca (o sin perseguir) -> ataca
+        }
         else
             ModoPatrulla();
     }
@@ -75,6 +88,13 @@ public class EnemigoArena : MonoBehaviour
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         else
             rb.linearVelocity = new Vector2(direccion * velocidad, rb.linearVelocity.y);
+    }
+
+    void LateUpdate()
+    {
+        // Encara segun la orientacion del arte (corrige el volteo si el sprite mira a la izquierda).
+        if (sr != null)
+            sr.flipX = spriteMiraDerecha ? direccion < 0f : direccion > 0f;
     }
 
     bool VeARuli()
@@ -100,6 +120,15 @@ public class EnemigoArena : MonoBehaviour
             ruliSalud.RecibirDaño(daño);
             timerAtaque = intervaloAtaque;
         }
+    }
+
+    void ModoPerseguir()
+    {
+        // Camina hacia Ruli (sin atacar) hasta quedar al alcance.
+        if (anim != null) anim.SetBool("atacando", false);
+        float dx = ruli.position.x - transform.position.x;
+        direccion = dx >= 0f ? 1f : -1f;
+        sr.flipX  = direccion < 0f;
     }
 
     void ModoPatrulla()

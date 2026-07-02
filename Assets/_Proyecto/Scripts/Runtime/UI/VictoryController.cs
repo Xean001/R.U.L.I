@@ -86,6 +86,11 @@ public class VictoryController : MonoBehaviour
         victoriaMostrada = true;
         animando = true;
 
+        // Deriva el nivel del nombre de la escena (ej. "Nivel3" -> 3), asi no
+        // depende del campo nivelActual (que en instancias de prefab puede quedar mal).
+        int nivelEscena = NivelDeLaEscena();
+        if (nivelEscena > 0) nivelActual = nivelEscena;
+
         // CONGELAR EL JUEGO
         Time.timeScale = 0f;
 
@@ -113,6 +118,15 @@ public class VictoryController : MonoBehaviour
         // Desbloquear siguiente nivel
         PlayerPrefs.SetInt("Nivel" + (nivelActual + 1) + "Desbloqueado", 1);
         PlayerPrefs.Save();
+    }
+
+    // Extrae el numero del nombre de la escena activa ("Nivel3" -> 3). 0 si no hay.
+    int NivelDeLaEscena()
+    {
+        string nombre = SceneManager.GetActiveScene().name;
+        string dig = "";
+        foreach (char c in nombre) if (char.IsDigit(c)) dig += c;
+        return int.TryParse(dig, out int n) ? n : 0;
     }
 
     IEnumerator AnimacionEntrada()
