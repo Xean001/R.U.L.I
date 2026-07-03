@@ -13,6 +13,10 @@ public class EnemigoCarrito : MonoBehaviour
 
     public bool dañaAlEmbestir = true;
 
+    [Header("Empuje")]
+    public float fuerzaEmpuje = 6f;         // empujon horizontal hacia donde va el carrito
+    public float fuerzaEmpujeVertical = 3f; // levanta un poco a Ruli para que el empuje se sienta
+
     public float alturaMinExplotar = 0.35f;
 
     private Rigidbody2D rb;
@@ -79,6 +83,12 @@ public class EnemigoCarrito : MonoBehaviour
             if (embistiendo)
             {
                 if (dañaAlEmbestir) salud.RecibirDaño();
+
+                // Empujon en la direccion en que iba el carrito
+                var mov = col.gameObject.GetComponent<RuliMovimiento>();
+                if (mov != null)
+                    mov.Empujar(new Vector2(direccion * fuerzaEmpuje, fuerzaEmpujeVertical));
+
                 Explotar();                 // al topar al personaje tambien se destruye
             }
             return;

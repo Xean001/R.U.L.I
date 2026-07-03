@@ -62,6 +62,7 @@ public class BolaEnergia : MonoBehaviour
     {
         disparada = true;
         sr.sprite = spriteDisparo;
+        if (jefe != null) jefe.BolaLanzada();
 
         var ruli = FindFirstObjectByType<RuliMovimiento>();
         direccion = ruli != null

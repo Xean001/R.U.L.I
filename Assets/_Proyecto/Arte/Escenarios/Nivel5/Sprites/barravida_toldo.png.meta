@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 36da85140772daa4b80ea11d1055bd40
+guid: a2c6f4620eaf1054ca8b7a38986f63ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3307304441730116051
-    second: roca1_0
-  - first:
-      213: 4578397973762171451
-    second: roca1_1
-  - first:
-      213: 6727589570318121774
-    second: roca1_2
+      213: -6350528871944757004
+    second: barravida_toldo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -81,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: roca1_0
+      name: barravida_toldo_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 142
-        width: 1742
-        height: 2053
+        x: 0
+        y: 0
+        width: 1024
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d26da9212281a12d0800000000000000
-      internalID: -3307304441730116051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roca1_1
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 107
-        width: 128
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b32667223bcb98f30800000000000000
-      internalID: 4578397973762171451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roca1_2
-      rect:
-        serializedVersion: 2
-        x: 1102
-        y: 131
-        width: 94
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e2b3f65e1133d5d50800000000000000
-      internalID: 6727589570318121774
+      spriteID: 4f0eed333a36ed7a0800000000000000
+      internalID: -6350528871944757004
       vertices: []
       indices: 
       edges: []
@@ -188,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      roca1_0: -3307304441730116051
-      roca1_1: 4578397973762171451
-      roca1_2: 6727589570318121774
+      barravida_toldo_0: -6350528871944757004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

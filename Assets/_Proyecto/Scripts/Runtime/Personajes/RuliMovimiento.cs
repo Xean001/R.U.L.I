@@ -26,6 +26,7 @@ public class RuliMovimiento : MonoBehaviour
     public GameObject prefabDisparo;            // opcional; por defecto carga Resources/ProyectilRuli
     public float velocidadDisparo = 12f;
     public Vector2 offsetDisparo = new Vector2(0.6f, 0f);
+    public Vector2 offsetDisparoArriba = new Vector2(0f, 0.6f);
 
     [Header("Escalada (lianas)")]
     public float escalarVelocidad = 3f;
@@ -41,6 +42,9 @@ public class RuliMovimiento : MonoBehaviour
     private float movimientoHorizontal;
     private bool miraDerecha = true;
     private bool saltoPendiente;
+    private int saltosMaximos = 1;   // 2 si compro el doble salto en la tienda
+    private int saltosUsados;
+    private float empujeTimer;       // mientras corre, el control no pisa la velocidad del empujon
     private bool estaMuerto;
     private bool tornadoActivo;
     private float gravedadOriginal;
@@ -55,6 +59,7 @@ public class RuliMovimiento : MonoBehaviour
         salud   = GetComponent<RuliSalud>();
         equipar = GetComponent<EquiparArma>();
         gravedadOriginal = rb.gravityScale;
+        saltosMaximos = PlayerPrefs.GetInt("DobleSaltoComprado", 0) == 1 ? 2 : 1;
         if (soundControl == null)
             soundControl = GetComponent<PlayerSoundcontroler>();
     }
@@ -87,7 +92,7 @@ public class RuliMovimiento : MonoBehaviour
             EntrarLiana();
         }
 
-        if (!escalando && saltoInput && estaEnSuelo && !RuliInput.RuedaAbierta && !tornadoActivo)
+        if (!escalando && saltoInput && (estaEnSuelo || saltosUsados < saltosMaximos) && !RuliInput.RuedaAbierta && !tornadoActivo)
             saltoPendiente = true;
 
         if (RuliInput.AtaquePresionado() && !RuliInput.RuedaAbierta)
@@ -116,12 +121,16 @@ public class RuliMovimiento : MonoBehaviour
             return;
         }
 
-        rb.linearVelocity = new Vector2(movimientoHorizontal * velocidad, rb.linearVelocity.y);
+        if (empujeTimer > 0f)
+            empujeTimer -= Time.fixedDeltaTime;   // conserva la velocidad del empujon
+        else
+            rb.linearVelocity = new Vector2(movimientoHorizontal * velocidad, rb.linearVelocity.y);
 
         if (saltoPendiente)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
             saltoPendiente = false;
+            saltosUsados = estaEnSuelo ? 1 : saltosUsados + 1;
             estaEnSuelo = false;
             if (anim != null) anim.SetTrigger("saltar");
             if (soundControl != null)
@@ -136,6 +145,7 @@ public class RuliMovimiento : MonoBehaviour
     {
         if (!EsColisionSuelo(col)) return;
         estaEnSuelo = true;
+        saltosUsados = 0;
 
         var llanta = col.gameObject.GetComponent<Llanta>();
         if (llanta != null)
@@ -148,7 +158,7 @@ public class RuliMovimiento : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (EsColisionSuelo(col)) estaEnSuelo = true;
+        if (EsColisionSuelo(col)) { estaEnSuelo = true; saltosUsados = 0; }
     }
 
     void OnCollisionExit2D(Collision2D col)
@@ -177,6 +187,16 @@ public class RuliMovimiento : MonoBehaviour
             lianasEnContacto = Mathf.Max(0, lianasEnContacto - 1);
             if (lianasEnContacto == 0) DejarLiana();
         }
+    }
+
+    // Empujon externo (ej. embestida del carrito): fija la velocidad y bloquea
+    // el control horizontal un momento para que el golpe se sienta.
+    public void Empujar(Vector2 velocidadEmpuje, float duracion = 0.25f)
+    {
+        if (estaMuerto) return;
+        DejarLiana();
+        rb.linearVelocity = velocidadEmpuje;
+        empujeTimer = duracion;
     }
 
     void EntrarLiana()
@@ -238,13 +258,17 @@ public class RuliMovimiento : MonoBehaviour
         // Arma/soplador -> animacion de disparo + proyectil
         if (arma == 2)
         {
+            // Con W presionada (y sin estar escalando) dispara hacia arriba
+            bool arriba = !escalando && RuliInput.EscalarVertical() > 0.5f;
+
             if (soundControl != null) soundControl.PlayAttack();
             if (anim != null)
             {
-                anim.ResetTrigger("atacarDisparo");
-                anim.SetTrigger("atacarDisparo");
+                string trigger = arriba ? "atacarDisparoArriba" : "atacarDisparo";
+                anim.ResetTrigger(trigger);
+                anim.SetTrigger(trigger);
             }
-            DispararProyectil();
+            DispararProyectil(arriba);
             return;
         }
 
@@ -258,26 +282,31 @@ public class RuliMovimiento : MonoBehaviour
         AplicarGolpe(radioAtaque);
     }
 
-    void DispararProyectil()
+    void DispararProyectil(bool arriba = false)
     {
         GameObject prefab = prefabDisparo != null ? prefabDisparo : Resources.Load<GameObject>("ProyectilRuli");
         if (prefab == null) return;
 
         float dir = miraDerecha ? 1f : -1f;
-        Vector3 origen = transform.position + new Vector3(offsetDisparo.x * dir, offsetDisparo.y, 0f);
-        GameObject bala = Instantiate(prefab, origen, Quaternion.identity);
+        Vector2 offset = arriba ? offsetDisparoArriba : offsetDisparo;
+        Vector3 origen = transform.position + new Vector3(offset.x * dir, offset.y, 0f);
+
+        // Hacia arriba la bala se rota 90 grados (el sprite apunta a la derecha)
+        Quaternion rot = arriba ? Quaternion.Euler(0f, 0f, 90f * dir) : Quaternion.identity;
+        GameObject bala = Instantiate(prefab, origen, rot);
 
         // Orientar la bala hacia donde mira Ruli
         Vector3 esc = bala.transform.localScale;
         esc.x = Mathf.Abs(esc.x) * dir;
         bala.transform.localScale = esc;
 
+        Vector2 vel = arriba ? new Vector2(0f, velocidadDisparo) : new Vector2(dir * velocidadDisparo, 0f);
         var p = bala.GetComponent<ProyectilRuli>();
-        if (p != null) p.Lanzar(new Vector2(dir * velocidadDisparo, 0f));
+        if (p != null) p.Lanzar(vel);
         else
         {
             var rbBala = bala.GetComponent<Rigidbody2D>();
-            if (rbBala != null) rbBala.linearVelocity = new Vector2(dir * velocidadDisparo, 0f);
+            if (rbBala != null) rbBala.linearVelocity = vel;
         }
     }
 
