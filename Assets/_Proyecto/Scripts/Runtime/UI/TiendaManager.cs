@@ -5,6 +5,7 @@ public class TiendaManager : MonoBehaviour
     [Header("Precios (hojas)")]
     public int precioSoplador = 5;
     public int precioTornado  = 3;
+    public int precioDobleSalto = 5;
 
     public void ComprarSoplador()
     {
@@ -19,6 +20,26 @@ public class TiendaManager : MonoBehaviour
             PlayerPrefs.SetInt("Arma1Comprada", 1);
             PlayerPrefs.Save();
             Debug.Log("Soplador comprado");
+        }
+        else
+        {
+            Debug.Log("No tienes suficientes hojas");
+        }
+    }
+
+    public void ComprarDobleSalto()
+    {
+        if (PlayerPrefs.GetInt("DobleSaltoComprado", 0) == 1)
+        {
+            Debug.Log("Doble salto ya comprado");
+            return;
+        }
+
+        if (BancoMonedas.Gastar(precioDobleSalto))
+        {
+            PlayerPrefs.SetInt("DobleSaltoComprado", 1);
+            PlayerPrefs.Save();
+            Debug.Log("Doble salto comprado");
         }
         else
         {

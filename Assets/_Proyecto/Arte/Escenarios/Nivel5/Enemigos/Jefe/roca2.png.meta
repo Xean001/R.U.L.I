@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: 6f527ce8b43d447c89ecf19628ddc139
+guid: 428b0ca575059214f869bd0d5eeab0ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -215968282426101340
-    second: animacion arma_0
+      213: -4598987969219244033
+    second: roca2_0
   - first:
-      213: -589982250409690144
-    second: animacion arma_1
+      213: -1647772339135288300
+    second: roca2_1
   - first:
-      213: -1743044759620252151
-    second: animacion arma_2
+      213: -1692464886125865147
+    second: roca2_2
   - first:
-      213: -3616006798543400735
-    second: animacion arma_3
+      213: 496907195163965312
+    second: roca2_3
   - first:
-      213: 3199315085158259497
-    second: animacion arma_4
+      213: -52991240705291820
+    second: roca2_4
+  - first:
+      213: 1464771477192601164
+    second: roca2_5
+  - first:
+      213: -4177193782928657988
+    second: roca2_6
+  - first:
+      213: 1208559731619238970
+    second: roca2_7
+  - first:
+      213: -805878968748786820
+    second: roca2_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,12 +70,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,111 +137,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animacion arma_0
+      name: roca2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 93
+        y: 119
+        width: 1578
+        height: 2043
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a1bd3bcdf9b00df0800000000000000
-      internalID: -215968282426101340
+      spriteID: fff4468fecc1d20c0800000000000000
+      internalID: -4598987969219244033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion arma_1
+      name: roca2_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 499
+        y: 108
+        width: 23
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0eb7b84e446ffc7f0800000000000000
-      internalID: -589982250409690144
+      spriteID: 41c602fa9cfe129e0800000000000000
+      internalID: -1647772339135288300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion arma_2
+      name: roca2_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 534
+        y: 73
+        width: 47
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90e8a33b6067fc7e0800000000000000
-      internalID: -1743044759620252151
+      spriteID: 54755a337282388e0800000000000000
+      internalID: -1692464886125865147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion arma_3
+      name: roca2_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 753
+        y: 96
+        width: 37
+        height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e05c63a9fc51ddc0800000000000000
-      internalID: -3616006798543400735
+      spriteID: 0877516167e55e600800000000000000
+      internalID: 496907195163965312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion arma_4
+      name: roca2_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 1298
+        y: 107
+        width: 187
+        height: 106
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92b18678e10466c20800000000000000
-      internalID: 3199315085158259497
+      spriteID: 4d9cd815fbcb34ff0800000000000000
+      internalID: -52991240705291820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roca2_5
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 96
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e6037d5e9e35410800000000000000
+      internalID: 1464771477192601164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roca2_6
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 15
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1319ad260a706c0800000000000000
+      internalID: -4177193782928657988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roca2_7
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 26
+        width: 12
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3491053caaa5c010800000000000000
+      internalID: 1208559731619238970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roca2_8
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 4
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b35cff851f0d4f0800000000000000
+      internalID: -805878968748786820
       vertices: []
       indices: 
       edges: []
@@ -238,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ecdeae00033696488733759809b7c8f
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -246,15 +346,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      animacion arma_0: -215968282426101340
-      animacion arma_1: -589982250409690144
-      animacion arma_2: -1743044759620252151
-      animacion arma_3: -3616006798543400735
-      animacion arma_4: 3199315085158259497
+      roca2_0: -4598987969219244033
+      roca2_1: -1647772339135288300
+      roca2_2: -1692464886125865147
+      roca2_3: 496907195163965312
+      roca2_4: -52991240705291820
+      roca2_5: 1464771477192601164
+      roca2_6: -4177193782928657988
+      roca2_7: 1208559731619238970
+      roca2_8: -805878968748786820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

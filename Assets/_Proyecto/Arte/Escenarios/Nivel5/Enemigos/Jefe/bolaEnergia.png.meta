@@ -1,22 +1,79 @@
 fileFormatVersion: 2
-guid: 6f527ce8b43d447c89ecf19628ddc139
+guid: da52aea9a5fb6174e913b0a64a7b72ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -215968282426101340
-    second: animacion arma_0
+      213: -8752736550536700206
+    second: bolaEnergia_0
   - first:
-      213: -589982250409690144
-    second: animacion arma_1
+      213: 692163123110387630
+    second: bolaEnergia_1
   - first:
-      213: -1743044759620252151
-    second: animacion arma_2
+      213: -637797876081765444
+    second: bolaEnergia_2
   - first:
-      213: -3616006798543400735
-    second: animacion arma_3
+      213: 7887979416650476463
+    second: bolaEnergia_3
   - first:
-      213: 3199315085158259497
-    second: animacion arma_4
+      213: -4443758823599821789
+    second: bolaEnergia_4
+  - first:
+      213: 4697099652106957894
+    second: bolaEnergia_5
+  - first:
+      213: -4816573660064616159
+    second: bolaEnergia_6
+  - first:
+      213: -8031178957662344505
+    second: bolaEnergia_7
+  - first:
+      213: 2236741164656107504
+    second: bolaEnergia_8
+  - first:
+      213: 4691009406046024275
+    second: bolaEnergia_9
+  - first:
+      213: -8199152582116471433
+    second: bolaEnergia_10
+  - first:
+      213: -8905879322082014413
+    second: bolaEnergia_11
+  - first:
+      213: -872043417761524651
+    second: bolaEnergia_12
+  - first:
+      213: 1003246682195085477
+    second: bolaEnergia_13
+  - first:
+      213: -1732303332377528883
+    second: bolaEnergia_14
+  - first:
+      213: -4314181926310144857
+    second: bolaEnergia_15
+  - first:
+      213: 8768081353539553254
+    second: bolaEnergia_16
+  - first:
+      213: 1405885024923105394
+    second: bolaEnergia_17
+  - first:
+      213: -591477943205013371
+    second: bolaEnergia_18
+  - first:
+      213: 6945805027328480373
+    second: bolaEnergia_19
+  - first:
+      213: 9169966488446865820
+    second: bolaEnergia_20
+  - first:
+      213: -7878926066145186297
+    second: bolaEnergia_21
+  - first:
+      213: -1549018543822700237
+    second: bolaEnergia_22
+  - first:
+      213: -2323244849732920119
+    second: bolaEnergia_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 1600
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,10 +141,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,111 +182,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animacion arma_0
+      name: bolaEnergia_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 1442
+        height: 1399
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a1bd3bcdf9b00df0800000000000000
-      internalID: -215968282426101340
+      spriteID: 0aa5d2920cec57d40b3ebf357ddaa8ff
+      internalID: -8752736550536700206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion arma_1
+      name: bolaEnergia_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 1442
         y: 0
-        width: 32
-        height: 32
+        width: 1442
+        height: 1399
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0eb7b84e446ffc7f0800000000000000
-      internalID: -589982250409690144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion arma_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90e8a33b6067fc7e0800000000000000
-      internalID: -1743044759620252151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion arma_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e05c63a9fc51ddc0800000000000000
-      internalID: -3616006798543400735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacion arma_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92b18678e10466c20800000000000000
-      internalID: 3199315085158259497
+      spriteID: e794670a36d0a154ea2e0bb1e9e02627
+      internalID: 692163123110387630
       vertices: []
       indices: 
       edges: []
@@ -238,7 +229,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ecdeae00033696488733759809b7c8f
+    spriteID: fd53ede3309921c419778116365d1dad
     internalID: 0
     vertices: []
     indices: 
@@ -246,15 +237,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      animacion arma_0: -215968282426101340
-      animacion arma_1: -589982250409690144
-      animacion arma_2: -1743044759620252151
-      animacion arma_3: -3616006798543400735
-      animacion arma_4: 3199315085158259497
+      bolaEnergia_0: -8752736550536700206
+      bolaEnergia_1: 692163123110387630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

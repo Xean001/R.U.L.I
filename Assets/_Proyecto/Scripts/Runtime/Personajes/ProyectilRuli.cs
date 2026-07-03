@@ -54,6 +54,10 @@ public class ProyectilRuli : MonoBehaviour
         var dron = other.GetComponent<EnemigoDron>();
         if (dron != null) { dron.Golpe(); golpeoEnemigo = true; }
 
+        // Jefe del Nivel 5: solo es vulnerable en su punto debil (donde carga la bola)
+        var puntoDebil = other.GetComponent<PuntoDebilJefe>();
+        if (puntoDebil != null) { puntoDebil.Golpe(); golpeoEnemigo = true; }
+
         var rompible = other.GetComponent<ObjetoRompible>();
         if (rompible != null) { rompible.Golpe(); golpeoEnemigo = true; }
 
