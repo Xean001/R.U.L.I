@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: da52aea9a5fb6174e913b0a64a7b72ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8752736550536700206
+    second: bolaEnergia_0
+  - first:
+      213: 692163123110387630
+    second: bolaEnergia_1
+  - first:
+      213: -637797876081765444
+    second: bolaEnergia_2
+  - first:
+      213: 7887979416650476463
+    second: bolaEnergia_3
+  - first:
+      213: -4443758823599821789
+    second: bolaEnergia_4
+  - first:
+      213: 4697099652106957894
+    second: bolaEnergia_5
+  - first:
+      213: -4816573660064616159
+    second: bolaEnergia_6
+  - first:
+      213: -8031178957662344505
+    second: bolaEnergia_7
+  - first:
+      213: 2236741164656107504
+    second: bolaEnergia_8
+  - first:
+      213: 4691009406046024275
+    second: bolaEnergia_9
+  - first:
+      213: -8199152582116471433
+    second: bolaEnergia_10
+  - first:
+      213: -8905879322082014413
+    second: bolaEnergia_11
+  - first:
+      213: -872043417761524651
+    second: bolaEnergia_12
+  - first:
+      213: 1003246682195085477
+    second: bolaEnergia_13
+  - first:
+      213: -1732303332377528883
+    second: bolaEnergia_14
+  - first:
+      213: -4314181926310144857
+    second: bolaEnergia_15
+  - first:
+      213: 8768081353539553254
+    second: bolaEnergia_16
+  - first:
+      213: 1405885024923105394
+    second: bolaEnergia_17
+  - first:
+      213: -591477943205013371
+    second: bolaEnergia_18
+  - first:
+      213: 6945805027328480373
+    second: bolaEnergia_19
+  - first:
+      213: 9169966488446865820
+    second: bolaEnergia_20
+  - first:
+      213: -7878926066145186297
+    second: bolaEnergia_21
+  - first:
+      213: -1549018543822700237
+    second: bolaEnergia_22
+  - first:
+      213: -2323244849732920119
+    second: bolaEnergia_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bolaEnergia_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1442
+        height: 1399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa5d2920cec57d40b3ebf357ddaa8ff
+      internalID: -8752736550536700206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolaEnergia_1
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 0
+        width: 1442
+        height: 1399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e794670a36d0a154ea2e0bb1e9e02627
+      internalID: 692163123110387630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fd53ede3309921c419778116365d1dad
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bolaEnergia_0: -8752736550536700206
+      bolaEnergia_1: 692163123110387630
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
