@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (RuliInput.PausaPresionada() || (pausado && RuliInput.CancelPresionado()))
         {
             if (pausado)
                 Reanudar();

@@ -328,7 +328,6 @@ MonoBehaviour:
   spriteBloqueado: {fileID: 6434219578898226013, guid: f58267c4b64e7d44aa27a2f8264a1ce4, type: 3}
   imagenEfectoSeleccion: {fileID: 97462342}
   offsetEfecto: {x: 0, y: -40}
-  marcaCompletado: {fileID: 837708192}
 --- !u!1 &131749989
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +485,6 @@ MonoBehaviour:
   spriteBloqueado: {fileID: 6434219578898226013, guid: f58267c4b64e7d44aa27a2f8264a1ce4, type: 3}
   imagenEfectoSeleccion: {fileID: 504728221}
   offsetEfecto: {x: 0, y: -40}
-  marcaCompletado: {fileID: 1018102279}
 --- !u!224 &137230758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -882,7 +880,6 @@ MonoBehaviour:
   spriteBloqueado: {fileID: 6434219578898226013, guid: f58267c4b64e7d44aa27a2f8264a1ce4, type: 3}
   imagenEfectoSeleccion: {fileID: 882169927}
   offsetEfecto: {x: 0, y: -40}
-  marcaCompletado: {fileID: 1272178227}
 --- !u!1 &504728220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +1986,6 @@ MonoBehaviour:
   spriteBloqueado: {fileID: 6434219578898226013, guid: f58267c4b64e7d44aa27a2f8264a1ce4, type: 3}
   imagenEfectoSeleccion: {fileID: 613933097}
   offsetEfecto: {x: 0, y: -40}
-  marcaCompletado: {fileID: 1910545967}
 --- !u!1 &1458086602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,7 +2305,6 @@ MonoBehaviour:
   spriteBloqueado: {fileID: 6434219578898226013, guid: f58267c4b64e7d44aa27a2f8264a1ce4, type: 3}
   imagenEfectoSeleccion: {fileID: 1567935864}
   offsetEfecto: {x: 0, y: -40}
-  marcaCompletado: {fileID: 1772424765}
 --- !u!1 &1910545967
 GameObject:
   m_ObjectHideFlags: 0

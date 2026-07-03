@@ -71,10 +71,20 @@ public class MobileControlsOverlay : MonoBehaviour
             new Vector2(130f, 135f), new Vector2(150f, 150f), MobileControlAction.Left);
         CrearBoton("MobileRight", ">", new Vector2(0f, 0f), new Vector2(0f, 0f),
             new Vector2(315f, 135f), new Vector2(150f, 150f), MobileControlAction.Right);
+        CrearBoton("MobileUp", "^", new Vector2(0f, 0f), new Vector2(0f, 0f),
+            new Vector2(222f, 235f), new Vector2(130f, 130f), MobileControlAction.Up);
+        CrearBoton("MobileDown", "v", new Vector2(0f, 0f), new Vector2(0f, 0f),
+            new Vector2(222f, 45f), new Vector2(130f, 130f), MobileControlAction.Down);
         CrearBoton("MobileJump", "JUMP", new Vector2(1f, 0f), new Vector2(1f, 0f),
             new Vector2(-330f, 145f), new Vector2(165f, 165f), MobileControlAction.Jump);
         CrearBoton("MobileAttack", "ATK", new Vector2(1f, 0f), new Vector2(1f, 0f),
             new Vector2(-140f, 145f), new Vector2(165f, 165f), MobileControlAction.Attack);
+        CrearBoton("MobileSkillWheel", "ARMA", new Vector2(1f, 0f), new Vector2(1f, 0f),
+            new Vector2(-235f, 330f), new Vector2(155f, 95f), MobileControlAction.SkillWheel);
+        CrearBoton("MobileSubmit", "OK", new Vector2(1f, 0f), new Vector2(1f, 0f),
+            new Vector2(-410f, 330f), new Vector2(120f, 90f), MobileControlAction.Submit);
+        CrearBoton("MobileCancel", "X", new Vector2(1f, 0f), new Vector2(1f, 0f),
+            new Vector2(-90f, 330f), new Vector2(100f, 90f), MobileControlAction.Cancel);
         if (FindAnyObjectByType<PausaController>() != null)
         {
             CrearBoton("MobilePause", "II", new Vector2(1f, 1f), new Vector2(1f, 1f),
@@ -135,8 +145,13 @@ public enum MobileControlAction
 {
     Left,
     Right,
+    Up,
+    Down,
     Jump,
     Attack,
+    SkillWheel,
+    Submit,
+    Cancel,
     Pause
 }
 
@@ -154,11 +169,26 @@ public class MobileControlButton : MonoBehaviour, IPointerDownHandler, IPointerU
             case MobileControlAction.Right:
                 RuliInput.SetMobileMove(1, true);
                 break;
+            case MobileControlAction.Up:
+                RuliInput.SetMobileVertical(1, true);
+                break;
+            case MobileControlAction.Down:
+                RuliInput.SetMobileVertical(-1, true);
+                break;
             case MobileControlAction.Jump:
                 RuliInput.MobileJumpDown();
                 break;
             case MobileControlAction.Attack:
                 RuliInput.MobileAttackDown();
+                break;
+            case MobileControlAction.SkillWheel:
+                RuliInput.MobileRuedaDown();
+                break;
+            case MobileControlAction.Submit:
+                RuliInput.MobileSubmitDown();
+                break;
+            case MobileControlAction.Cancel:
+                RuliInput.MobileCancelDown();
                 break;
             case MobileControlAction.Pause:
                 RuliInput.MobilePauseDown();
@@ -182,5 +212,9 @@ public class MobileControlButton : MonoBehaviour, IPointerDownHandler, IPointerU
             RuliInput.SetMobileMove(-1, false);
         else if (accion == MobileControlAction.Right)
             RuliInput.SetMobileMove(1, false);
+        else if (accion == MobileControlAction.Up)
+            RuliInput.SetMobileVertical(1, false);
+        else if (accion == MobileControlAction.Down)
+            RuliInput.SetMobileVertical(-1, false);
     }
 }

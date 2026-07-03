@@ -860,6 +860,7 @@ GameObject:
   - component: {fileID: 138837045}
   - component: {fileID: 138837044}
   - component: {fileID: 138837043}
+  - component: {fileID: 138837053}
   m_Layer: 3
   m_Name: Ruli
   m_TagString: Untagged
@@ -1057,6 +1058,9 @@ MonoBehaviour:
   duracionTornado: 3
   intervaloGolpeTornado: 0.3
   radioTornado: 1
+  prefabDisparo: {fileID: 0}
+  velocidadDisparo: 12
+  offsetDisparo: {x: 0.6, y: 0}
   soundControl: {fileID: 138837044}
 --- !u!70 &138837049
 CapsuleCollider2D:
@@ -1197,6 +1201,25 @@ Transform:
   - {fileID: 577099713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138837053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138837042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5643b89fc5c48114c98f2d50251796f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquiparArma
+  armaTornado: {fileID: 0}
+  armaSoplador: {fileID: 0}
+  panelRueda: {fileID: 0}
+  colorNormal: {r: 1, g: 1, b: 1, a: 1}
+  colorBloqueado: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+  colorSeleccion: {r: 0.2, g: 1, b: 0.6, a: 1}
+  indiceArmaActiva: 0
 --- !u!1 &148128901
 GameObject:
   m_ObjectHideFlags: 0

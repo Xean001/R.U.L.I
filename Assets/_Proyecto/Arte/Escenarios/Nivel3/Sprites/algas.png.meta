@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fad906f57c6be4058a2c9f6b8f4f6f2e
+guid: 5d43bdb4626194fc980611e53ae506a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3101105914864794996
-    second: piso_0
+      213: 5005185709303387857
+    second: Capa de imagen copia 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: piso_0
+      name: Capa de imagen copia 3_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 251
-        width: 2038
-        height: 241
+        x: 0
+        y: 0
+        width: 110
+        height: 505
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c820f9dc998a6f4d0800000000000000
-      internalID: -3101105914864794996
+      spriteID: 1d6d3ed42edf57540800000000000000
+      internalID: 5005185709303387857
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      piso_0: -3101105914864794996
+      Capa de imagen copia 3_0: 5005185709303387857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
