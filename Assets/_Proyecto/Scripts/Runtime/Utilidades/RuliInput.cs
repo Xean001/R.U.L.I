@@ -2,6 +2,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
+public enum RuliTipoControl
+{
+    TecladoMouse,
+    Mando,
+    Movil
+}
+
 public static class RuliInput
 {
     private const float MovimientoDeadZone = 0.2f;
@@ -27,6 +34,11 @@ public static class RuliInput
     private static bool mobileMenuAbajoPendiente;
     private static bool mobileMenuIzquierdaPendiente;
     private static bool mobileMenuDerechaPendiente;
+    private static RuliTipoControl ultimoTipoControl = Application.isMobilePlatform
+        ? RuliTipoControl.Movil
+        : RuliTipoControl.TecladoMouse;
+
+    public static RuliTipoControl TipoControlActual => ultimoTipoControl;
 
     public static float MovimientoHorizontal()
     {
@@ -35,9 +47,23 @@ public static class RuliInput
         float mando = HorizontalMando();
         float joystick = HorizontalJoystick();
 
-        if (Mathf.Abs(mobile) > 0f) return mobile;
+        if (Mathf.Abs(mobile) > 0f)
+        {
+            MarcarControl(RuliTipoControl.Movil);
+            return mobile;
+        }
+
         float fisico = Mathf.Abs(mando) > Mathf.Abs(teclado) ? mando : teclado;
-        return Mathf.Abs(joystick) > Mathf.Abs(fisico) ? joystick : fisico;
+        if (Mathf.Abs(joystick) > Mathf.Abs(fisico))
+        {
+            if (Mathf.Abs(joystick) > 0f) MarcarControl(RuliTipoControl.Mando);
+            return joystick;
+        }
+
+        if (Mathf.Abs(fisico) > 0f)
+            MarcarControl(Mathf.Abs(mando) > Mathf.Abs(teclado) ? RuliTipoControl.Mando : RuliTipoControl.TecladoMouse);
+
+        return fisico;
     }
 
     public static bool SaltoPresionado()
@@ -47,10 +73,14 @@ public static class RuliInput
         bool tecladoPresionado = teclado != null && teclado.spaceKey.wasPressedThisFrame;
 
         bool mobilePresionado = ConsumirMobileSalto();
-        return tecladoPresionado ||
-            mobilePresionado ||
-            CualquierMandoPresiono(m => m.buttonSouth) ||
+        bool mandoPresionado = CualquierMandoPresiono(m => m.buttonSouth) ||
             CualquierJoystickPresiono(EsBotonPrincipalJoystick);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     // Eje vertical para escalar lianas: W/Arriba = sube (+1), S/Abajo = baja (-1).
@@ -58,26 +88,54 @@ public static class RuliInput
     {
         Keyboard teclado = Keyboard.current;
         float v = 0f;
+        bool tecladoActivo = false;
+        bool mandoActivo = false;
         if (teclado != null)
         {
-            if (teclado.wKey.isPressed || teclado.upArrowKey.isPressed)   v += 1f;
-            if (teclado.sKey.isPressed || teclado.downArrowKey.isPressed) v -= 1f;
+            if (teclado.wKey.isPressed || teclado.upArrowKey.isPressed)
+            {
+                v += 1f;
+                tecladoActivo = true;
+            }
+
+            if (teclado.sKey.isPressed || teclado.downArrowKey.isPressed)
+            {
+                v -= 1f;
+                tecladoActivo = true;
+            }
         }
 
         float mobile = VerticalMobile();
-        if (Mathf.Abs(mobile) > Mathf.Abs(v)) v = mobile;
+        if (Mathf.Abs(mobile) > Mathf.Abs(v))
+        {
+            v = mobile;
+            MarcarControl(RuliTipoControl.Movil);
+        }
 
         foreach (Gamepad mando in Gamepad.all)
         {
             Vector2 d = LeerDireccionMando(mando);
-            if (Mathf.Abs(d.y) > Mathf.Abs(v)) v = d.y > 0f ? 1f : -1f;
+            if (Mathf.Abs(d.y) > Mathf.Abs(v))
+            {
+                v = d.y > 0f ? 1f : -1f;
+                mandoActivo = true;
+            }
         }
 
         foreach (Joystick joystick in Joystick.all)
         {
             Vector2 d = LeerDireccionJoystick(joystick);
-            if (Mathf.Abs(d.y) > Mathf.Abs(v)) v = d.y > 0f ? 1f : -1f;
+            if (Mathf.Abs(d.y) > Mathf.Abs(v))
+            {
+                v = d.y > 0f ? 1f : -1f;
+                mandoActivo = true;
+            }
         }
+
+        if (mandoActivo)
+            MarcarControl(RuliTipoControl.Mando);
+        else if (tecladoActivo)
+            MarcarControl(RuliTipoControl.TecladoMouse);
 
         return Mathf.Clamp(v, -1f, 1f);
     }
@@ -92,14 +150,19 @@ public static class RuliInput
              teclado.zKey.wasPressedThisFrame);
         bool mousePresionado = mouse != null && mouse.leftButton.wasPressedThisFrame;
 
-        return tecladoPresionado ||
-            mousePresionado ||
-            ConsumirMobileAtaque() ||
+        bool mobilePresionado = ConsumirMobileAtaque();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.buttonWest) ||
             CualquierMandoPresiono(m => m.buttonEast) ||
             CualquierMandoPresiono(m => m.rightShoulder) ||
             CualquierMandoPresiono(m => m.rightTrigger) ||
             CualquierJoystickPresiono(EsBotonAtaqueJoystick);
+
+        if (tecladoPresionado || mousePresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mousePresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool RuedaAbierta { get; set; }
@@ -114,13 +177,18 @@ public static class RuliInput
              teclado.qKey.wasPressedThisFrame);
         bool mousePresionado = mouse != null && mouse.rightButton.wasPressedThisFrame;
 
-        return tecladoPresionado ||
-            mousePresionado ||
-            ConsumirMobileRueda() ||
+        bool mobilePresionado = ConsumirMobileRueda();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.buttonNorth) ||
             CualquierMandoPresiono(m => m.leftShoulder) ||
             CualquierMandoPresiono(m => m.selectButton) ||
             CualquierJoystickPresiono(EsBotonRuedaJoystick);
+
+        if (tecladoPresionado || mousePresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mousePresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool PausaPresionada()
@@ -129,10 +197,16 @@ public static class RuliInput
         bool tecladoPresionado = teclado != null &&
             (teclado.pKey.wasPressedThisFrame || teclado.escapeKey.wasPressedThisFrame);
 
-        return tecladoPresionado ||
-            ConsumirMobilePausa() ||
+        bool mobilePresionado = ConsumirMobilePausa();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.startButton) ||
             CualquierJoystickPresiono(EsBotonPausaJoystick);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool SubmitPresionado()
@@ -143,11 +217,17 @@ public static class RuliInput
              teclado.numpadEnterKey.wasPressedThisFrame ||
              teclado.spaceKey.wasPressedThisFrame);
 
-        return tecladoPresionado ||
-            ConsumirMobileSubmit() ||
+        bool mobilePresionado = ConsumirMobileSubmit();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.buttonSouth) ||
             CualquierMandoPresiono(m => m.startButton) ||
             CualquierJoystickPresiono(EsBotonPrincipalJoystick);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool CancelPresionado()
@@ -156,11 +236,17 @@ public static class RuliInput
         bool tecladoPresionado = teclado != null &&
             (teclado.escapeKey.wasPressedThisFrame || teclado.backspaceKey.wasPressedThisFrame);
 
-        return tecladoPresionado ||
-            ConsumirMobileCancel() ||
+        bool mobilePresionado = ConsumirMobileCancel();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.buttonEast) ||
             CualquierMandoPresiono(m => m.selectButton) ||
             CualquierJoystickPresiono(EsBotonCancelJoystick);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool MenuArribaPresionado()
@@ -169,11 +255,17 @@ public static class RuliInput
         bool tecladoPresionado = teclado != null &&
             (teclado.upArrowKey.wasPressedThisFrame || teclado.wKey.wasPressedThisFrame);
 
-        return tecladoPresionado ||
-            ConsumirMobileMenuArriba() ||
+        bool mobilePresionado = ConsumirMobileMenuArriba();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.dpad.up) ||
             EjeMandoPresionado(Vector2.up) ||
             EjeJoystickPresionado(Vector2.up);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool MenuAbajoPresionado()
@@ -182,11 +274,17 @@ public static class RuliInput
         bool tecladoPresionado = teclado != null &&
             (teclado.downArrowKey.wasPressedThisFrame || teclado.sKey.wasPressedThisFrame);
 
-        return tecladoPresionado ||
-            ConsumirMobileMenuAbajo() ||
+        bool mobilePresionado = ConsumirMobileMenuAbajo();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.dpad.down) ||
             EjeMandoPresionado(Vector2.down) ||
             EjeJoystickPresionado(Vector2.down);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool MenuIzquierdaPresionado()
@@ -195,11 +293,17 @@ public static class RuliInput
         bool tecladoPresionado = teclado != null &&
             (teclado.leftArrowKey.wasPressedThisFrame || teclado.aKey.wasPressedThisFrame);
 
-        return tecladoPresionado ||
-            ConsumirMobileMenuIzquierda() ||
+        bool mobilePresionado = ConsumirMobileMenuIzquierda();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.dpad.left) ||
             EjeMandoPresionado(Vector2.left) ||
             EjeJoystickPresionado(Vector2.left);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     public static bool MenuDerechaPresionado()
@@ -208,11 +312,17 @@ public static class RuliInput
         bool tecladoPresionado = teclado != null &&
             (teclado.rightArrowKey.wasPressedThisFrame || teclado.dKey.wasPressedThisFrame);
 
-        return tecladoPresionado ||
-            ConsumirMobileMenuDerecha() ||
+        bool mobilePresionado = ConsumirMobileMenuDerecha();
+        bool mandoPresionado =
             CualquierMandoPresiono(m => m.dpad.right) ||
             EjeMandoPresionado(Vector2.right) ||
             EjeJoystickPresionado(Vector2.right);
+
+        if (tecladoPresionado) MarcarControl(RuliTipoControl.TecladoMouse);
+        else if (mobilePresionado) MarcarControl(RuliTipoControl.Movil);
+        else if (mandoPresionado) MarcarControl(RuliTipoControl.Mando);
+
+        return tecladoPresionado || mobilePresionado || mandoPresionado;
     }
 
     public static void SetMobileMove(int direccion, bool presionado)
@@ -220,11 +330,13 @@ public static class RuliInput
         if (direccion < 0)
         {
             mobileIzquierda = presionado;
+            MarcarControl(RuliTipoControl.Movil);
             if (presionado) mobileMenuIzquierdaPendiente = true;
         }
         else if (direccion > 0)
         {
             mobileDerecha = presionado;
+            MarcarControl(RuliTipoControl.Movil);
             if (presionado) mobileMenuDerechaPendiente = true;
         }
     }
@@ -234,42 +346,50 @@ public static class RuliInput
         if (direccion < 0)
         {
             mobileAbajo = presionado;
+            MarcarControl(RuliTipoControl.Movil);
             if (presionado) mobileMenuAbajoPendiente = true;
         }
         else if (direccion > 0)
         {
             mobileArriba = presionado;
+            MarcarControl(RuliTipoControl.Movil);
             if (presionado) mobileMenuArribaPendiente = true;
         }
     }
 
     public static void MobileJumpDown()
     {
+        MarcarControl(RuliTipoControl.Movil);
         mobileSaltoPendiente = true;
     }
 
     public static void MobileAttackDown()
     {
+        MarcarControl(RuliTipoControl.Movil);
         mobileAtaquePendiente = true;
     }
 
     public static void MobilePauseDown()
     {
+        MarcarControl(RuliTipoControl.Movil);
         mobilePausaPendiente = true;
     }
 
     public static void MobileRuedaDown()
     {
+        MarcarControl(RuliTipoControl.Movil);
         mobileRuedaPendiente = true;
     }
 
     public static void MobileSubmitDown()
     {
+        MarcarControl(RuliTipoControl.Movil);
         mobileSubmitPendiente = true;
     }
 
     public static void MobileCancelDown()
     {
+        MarcarControl(RuliTipoControl.Movil);
         mobileCancelPendiente = true;
     }
 
@@ -506,6 +626,11 @@ public static class RuliInput
         }
 
         return false;
+    }
+
+    private static void MarcarControl(RuliTipoControl tipoControl)
+    {
+        ultimoTipoControl = tipoControl;
     }
 
     private static bool EjeMandoPresionado(Vector2 direccion)
